@@ -6,7 +6,6 @@
 | 01Y | Lv Yanzhi | [01y-Lv Yanzhi](./01y-lv-yanzhi.md) | |
 | 01 | Lv Cheng | [01-Lv Cheng](./01-lv-cheng.md) | |
 | 13 | Lv Shi | [13-Lv Shi](./13-lv-shi.md) | |
-| 13 | Lv Gaoshi | [13-Lv Gaoshi](./13-lv-gaoshi.md) |  | 
 | 14 | Lv Jingzheng | [14-Lv Jingzheng](./14-lv-jingzheng.md) | |
 | 15 | Lv Zhiheng | [15-Lv Zhifeng](./15-lv-zhiheng.md) | |
 | 15 | Lv Zifu | [15-lv-zifu](./15-lv-zifu.md) | |
