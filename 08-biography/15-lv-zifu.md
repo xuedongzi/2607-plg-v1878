@@ -1,13 +1,69 @@
-# 吕滋福
-* 来源：v1878
-* 页数：133-135 （2部）
+# 吕滋福 - 成15
+
+## 吕滋福（益之公）- 成15
+
+### 世表
+
+吕滋福
+
+* 排行第三
+* 字益之
+* 身份为太学生。因为第三个儿子吕金诚官至候选通判，他被朝廷钦加同知衔、加一级，并诰赠为朝议大夫。
+* 生卒
+    - 他生于乾隆乙巳年七月初六日子时（1785-08-11）
+    - 卒于道光丁未年三月十五日申时（1847-04-29）
+    - 享年六十三岁
+
+* 他的正妻是毛氏。被朝廷诰封为太恭人。
+    - 毛氏是太学生毛映魁的长女。
+    - 她生于乾隆癸丑年（1793年）十一月二十日寅时
+    - 卒于光绪戊寅年（1878年）七月初十日卯时
+    - 享年八十六岁
+* 夫妇二人有合传。他们合葬于三宝桥祖茔，位于东偏穆穴位。
+
+* 他们育有三个儿子：
+    - 长子吕金贡（过继给籍馥公为嗣）
+    - 次子吕金相
+    - 三子吕金城（即叔猷公）
+
+* 世表原文
+    - 滋福，行三，字益之。太学生，以三子金诚官候选通判，钦加同知衔加一级，诰赠朝议大夫。生乾隆乙巳七月初六日子时，卒道光丁未三月十五日申时，寿六十三。配毛氏。诰封太恭人。太学生讳映魁长女。生乾隆癸丑九十一月二十日寅时，卒于光绪戊寅七月初十日卯时，寿八十六。有合传。合葬三宝桥祖茔，东偏穆穴位。子三。长金贡继籍馥祠，次金相，三金城。
 
 ---
 
-## 原文
+#### Lü Zifu: the genealogical record
 
-益之公暨配毛太恭人合傳
-族姪 繼午謹撰
+**Lü Zifu**
+
+*   **Birth Order:** Third son
+*   **Courtesy Name (Zi):** Yizhi (益之)
+*   **Official Status:** Imperial Academy Student (Taixuesheng). Because his third son, Lü Jincheng, served as a Candidate for Sub-prefectural Magistrate (Houxuan Tongpan), Zifu was granted the title of Assistant Prefect (Tongzhi) and promoted by one grade by imperial decree, and posthumously honored as Grand Master for Court Consultation (Chaoyi Dafu).
+*   **Birth and Death:**
+    *   Born on the 6th day of the 7th lunar month in the Yisi year of the Qianlong reign (1785), during the Zi hour (11:00 PM – 1:00 AM), corresponding to August 11, 1785.
+    *   Passed away on the 15th day of the 3rd lunar month in the Dingwei year of the Daoguang reign (1847), during the Shen hour (3:00 PM – 5:00 PM), corresponding to April 29, 1847.
+    *   Lived to the age of 63.
+
+*   **Wife:** Lady Mao
+    *   Formally conferred the title of Grand Lady of Reverence (Tai Gongren) by imperial decree.
+    *   Lady Mao was the eldest daughter of Mao Yingkui, an Imperial Academy Student.
+    *   Born on the 20th day of the 11th lunar month in the Guichou year of the Qianlong reign (1793), during the Yin hour (3:00 AM – 5:00 AM).
+    *   Passed away on the 10th day of the 7th lunar month in the Wuyin year of the Guangxu reign (1878), during the Mao hour (5:00 AM – 7:00 AM).
+    *   Lived to the age of 86.
+*   **Biography and Burial:** The couple has a joint biography. They were buried together in the ancestral cemetery at Sanbao Bridge, located in the Mu tomb site on the eastern side.
+
+*   **Children:** Three sons
+    *   Eldest son: Lü Jingong (adopted as the heir to Jingong Gong).
+    *   Second son: Lü Jinxiang.
+    *   Third son: Lü Jincheng (also known as Shuyou Gong).
+
+---
+
+### 益之公暨配毛太恭人合传
+
+* 作者： 族姪 繼午謹撰
+* 族谱传原文
+
+```text
 公滋福字益之吾呂氏二分支祖諱鏞公十世孫候選
 縣佐養園公第三子贈朝議大夫配毛氏封太恭人公之
 先曾兩世秉鐸以儒術稱於時篤行醕學之士代不乏人
@@ -37,63 +93,51 @@
 同知銜加一級贈封如例今因續修家乘狀公與太恭人
 行誼丐一言余不斐義何敢辭畧為詮次益信公謀之
 善而太恭人賢淑之稱為不誣也
+```
 
 ---
 
-## 白话
+#### 现代汉语 标点
 
-這是一篇由作者「族姪繼午」為其堂叔「呂滋福（字益之）」與堂嬸「毛太恭人」所撰寫的合傳（生平傳記）。
-為了方便閱讀，以下為您將這篇文言文轉譯為白話文，並梳理出其核心生平與家族背景：
+益之公名叫滋福，是我们吕氏二分支祖、讳“镛”公的第十世孙，候补县佐养园公的第三个儿子。他死后被追赠为朝议大夫，妻子毛氏被封为太恭人。
 
-## 核心人物與背景
+益之公的先祖中，曾有两代人担任掌管地方教育的学官，以儒学闻名于当时，品行端正、学识纯正的读书人代代都有。到了益之公这一代，他恪守清贫寒素的家风，家道更加衰落。但他生性孝顺恭敬，以内在淳厚笃实的品行，深受乡里乡亲的敬重。
 
-* 呂滋福（益之公）：呂氏二分支祖「諱鏞公」的第十世孫。父親為「養園公」（後贈朝議大夫）。他為人孝順恭敬，堅守清寒，因品德純厚受到鄉里器重。
-* 毛太恭人：太學生「毛映魁」的女兒。二十六歲才出嫁，是一位極其賢惠、堅毅的女性。
+嘉庆庚辰年（1820年），益之公遭遇母亲去世，他悲痛欲绝，哀伤超过了常人。守丧期满后，因为堂兄笠湖公（吕志恒）出任台湾噶玛兰通判，远涉重洋，身边缺乏人手协助处理政务。益之公顾念手足之情，慷慨地偕同前往。当时，笠湖公正因为政绩卓著、清廉爱民而在福建官员中名列前茅，这其中益之公的襄助之功占了很大比重。
 
-------------------------------
-## 白話文翻譯## 【益之公生平：敦厚手足，客寓臺灣】
-益之公謹守清寒，家境日漸落寞。嘉慶庚辰年（1820年）母親過世，他悲傷過度超過常人。服喪期滿後，因為堂兄「笠湖公」當時擔任臺灣噶瑪蘭通判，遠渡重洋缺乏人手協助，益之公基於兄弟深厚情誼，毅然決定前往臺灣幫忙。當時笠湖公在閩台一帶因政績優異而受到上級高度肯定，這當中益之公的協助功不可沒。
-道光己丑年（1829年），益之公想到老父養園公年事已高且多病，很久沒有侍奉膝前，於是急忙收拾行囊返回家鄉。不料回家不到兩個月，父親便過世了。益之公深感多年客居在外、未能盡到人子奉養之責，抱憾終身。辦完喪事後，他再度前往臺灣。道光壬辰年（1832年），笠湖公因公殉職，益之公親自迎其靈柩返回故里。此後，他在家鄉閒居十多年，因生計日漸艱難，便憑藉精湛的畫工，以賣畫維持生計、娛樂晚年。道光丁未年（1847年）三月，他無病而終。
-## 【毛太恭人：艱苦持家，德性堅定】
-毛太恭人幼年喪母，侍奉父親極其孝順。其父才高八斗卻仕途不順，晚年患了痰疾，全靠毛太恭人辛勞奉養並主持家務，因此她直到二十六歲才嫁給益之公。婚後她恪盡媳婦職責，深得公婆歡心。
-益之公長期客居閩台期間，毛太恭人在家代替丈夫侍奉公婆。家裡錢財不足時，她就靠做針線活換取生活費以供養長輩。等到益之公從臺灣回來，家裡早已家徒四壁，毛太恭人依然勤勉地勤儉持家、相夫教子。益之公去世後，她與孤兒們百般籌措，將喪葬禮儀辦得面面俱到，不留一絲遺憾。這幾十年間的艱難困苦，幾乎不是常人所能忍受的，但毛太恭人意志堅定，最終振興了衰落的家業，造福了後代。
-咸豐庚申年（1860年）太平天國戰亂（寇亂）爆發，她前往鄉間避難，幸得天佑，屢次化險為夷。同治甲子年（1864年）夏天常州城克復，兒子「金誠」奉迎母親回到故鄉，悉心奉養。毛太恭人活到八十多歲，精神依體健朗。今年（1826年/此處應為光緒年間某秋）七月，她身體微感不適，不到一個時辰便安詳離世，如同僧人圓寂。益之公與毛太恭人，真可以說是得以善終、了看生死而毫無牽掛的人啊。
-## 【撰傳緣由】
-他們的兒子金誠兄繼承了庭訓與母教，靠著勤儉持家興辦祖業，後來做了候選通判，加同知銜。如今因為家族要續修家譜（家乘），需要記錄益之公與毛太恭人的品行事蹟，因而向我求取一篇傳記。我雖然才疏學淺，但義不容辭，於是粗略將其生平編次整理，這更讓我深信益之公深謀遠慮，而毛太恭人賢淑的稱譽也絕非虛傳。
-------------------------------
-## 文章三大價值
+道光己丑年（1829年），益之公挂念父亲养园公在家已久，很少能尽到早晚请安的孝道，且父亲年老多病，于是急忙收拾行装返回故里。谁知不到两个月，父亲便不幸离世。他深感自己常年在外作客，未能尽到奉养父母的孝心，留下了终天的遗憾。办完父亲的后事后，他再次前往台湾。道光壬辰年（1832年），笠湖公因公殉职，益之公亲自迎回堂兄的灵柩安葬。从此，他在家乡闲居了十多年。他擅长绘画，在生计日益窘迫时，便靠卖画来安度晚年。道光丁未年（1847年）三月，他无疾而终。
 
-   1. 文獻價值：記錄了清代地方士紳「遠涉重洋」前往臺灣噶瑪蘭（今宜蘭）輔佐官員（笠湖公）的歷史，是研究清代台閩雙邊關係與幕友（師爺）制度的珍貴家族史料。
-   2. 時代背景：文中提及「庚申寇亂」與「常城克復」，指的就是1860年前後太平天國軍隊攻占江蘇常州一帶、至1864年清軍收復常州的歷史事件。
-   3. 家族美德：文章極力讚揚了呂氏家族「手足情深（慷慨赴台）」、「孝道（急俶裝旋里）」以及女性在戰亂與貧困中「相夫教子、振墜緒」的堅韌美德。
+毛太恭人是太学生毛映魁公的女儿，生母姓卞，继母姓范。太恭人是范孺人所生，自幼便失去了生母，侍奉父亲极为孝顺恭敬。毛太学生才高学博，却屡次在科举考场中受挫。晚年时，他患上了痰疾，太恭人辛勤操劳，侍奉汤药，并独自操持家政。因此，她直到二十六岁才嫁给我的益之公。
 
-## 
+婚后，她恪守儿媳的本分，深得公婆的欢心。后来益之公长期客居福建，她便代为侍奉公公养园公，尽到儿媳的职责。在日用开销不足时，她便靠做针线活来换取美食奉养长辈。等到益之公从福建返回家乡时，已经是家徒四壁。太恭人勉力支撑，与丈夫同甘共苦，相夫教子，不遗余力。等到益之公去世时，她与孤儿们想尽办法，按照礼制妥善办理了丧事，没有留下丝毫遗憾。在这几十年中，她所经历的艰难困苦，绝不是普通人所能承受的。但她意志坚定，最终重振了衰落的家族，并为子孙后代留下了丰厚的福泽，这难道还不能称为贤德吗？
 
-您的考證非常精準！這篇傳記中所稱的「笠湖公」，確實就是清代大名鼎鼎的臺灣知府呂志恆（字立吾，號笠湖）。 [1] 
-結合歷史文獻與這篇〈合傳〉，我們可以對呂志恆（笠湖公）以及兩房家族的互動有更深刻的歷史還原：
-## 1. 呂志恆（笠湖公）的「職務軌跡」與傳記吻合
+咸丰庚申年（1860年，太平天国战乱期间），她避难到乡下。幸得上天保佑，履险如夷。同治甲子年（1864年）夏天，常州城被收复，长子金诚奉迎母亲回到城里。她以和悦的神色奉养母亲，以报答养育之恩。她年过八十，依然精神矍铄，大家都认为这是长寿的吉兆。
 
-* 噶瑪蘭通判時期（1823年補授）：傳記中提到益之公是在「服闋」（約1823年後）因為堂兄任「臺灣噶瑪蘭通判」而遠涉重洋去協助他。歷史上，呂志恆確於道光三年（1823年）八月借補「臺灣府撫民理番海防糧補通判（即噶瑪蘭廳通判）」。傳記與官方職官表完全吻合。
-* 臺灣府知府時期（1831年升任）：呂志恆此後歷任鹿仔港同知、福州海防同知等職，並於道光十一年（1831年）正式升任從四品的臺灣府知府。 [1, 2, 3] 
+今年（光绪戊寅年，1878年）秋天七月，她偶感微疾，不到一个时辰便忽然离世，宛如佛家圆寂一般。益之公与太恭人，大概就是那种能够善终正命、消除一切苦厄，对生死去来之际了然于心、毫无挂碍的人吧！
 
-## 2. 「歿於王事」的歷史真相：張丙事件
-傳記中寫道「壬辰笠湖公歿於王事，公迎其喪歸」，這裡指的「壬辰年」正是道光十二年（1832年）。 [1, 2] 
-
-* 當時臺灣爆發了著名的張丙起事（張丙案）。
-* 作為臺灣知府的呂志恆親自率兵從台南府城前往嘉義解圍，不幸在兩軍交戰中陣亡殉職。
-* 傳記此處更補足了歷史細節：呂志恆在臺灣戰死後，是他的堂弟益之公（呂滋福）親自冒險跨海「迎其喪歸」，將其遺體或靈柩帶回了江蘇常州（陽湖）老家安葬。 [1, 2] 
-
-## 3. 常州呂氏（河東世家）的血緣關係
-
-* 呂志恆在官方記載中為「江蘇常州府陽湖縣人」。
-* 傳記開頭提到「吾呂氏二分支祖諱鏞公十世孫」，說明他們是常州呂氏「二分支」的後裔。呂志恆與益之公（呂滋福）為同曾祖或同祖的「從兄弟（堂兄弟）」。 [3] 
-
-這篇家傳不僅印證了呂志恆在臺灣由噶瑪蘭通判一路做到知府的官場歷程，更補足了官方史料未載的「幕後故事」——他在台灣政績卓越的背後，有其堂弟益之公多年的跟隨與「贊成之力」；而他死於戰亂後，也是由這位堂弟跨海將他帶回故里。 [1, 2] 
-如果您正在為常州呂氏家族或清代臺灣史做深度編校，是否需要針對「張丙案中呂志恆殉職的細節」或「常州陽湖呂氏的宗族譜系」進行更深入的資料比對？
-
-[1] [https://zh.wikipedia.org](https://zh.wikipedia.org/zh-cn/%E5%91%82%E5%BF%97%E6%81%86_%28%E6%B8%85%E6%9C%9D%29)
-[2] [https://ctb.digital.ntu.edu.tw](http://ctb.digital.ntu.edu.tw/Find_person.php?person_name=%E5%91%82%E5%BF%97%E6%81%92&submit=%E9%80%81%E5%87%BA)
-[3] [https://zh.wikipedia.org](https://zh.wikipedia.org/zh-cn/%E8%87%BA%E7%81%A3%E5%BA%9C%E7%9F%A5%E5%BA%9C)
+长子金诚自幼秉承父亲的庭训，熟稔母亲的教诲，靠勤俭起家，官至候补通判，加同知衔、加一级，按例获得了朝廷的封赠。如今因为续修家谱，金诚陈述了父母亲的生平事迹，请求我为他们写一篇传记。我虽然不才，但怎敢推辞？于是简略地梳理了他们的生平，这也让我更加确信，益之公的深谋远虑，以及太恭人贤淑的美名，绝不是虚妄之词。
 
 ---
 
+#### Joint Biography of Lü Zifu and Lady Gao
+
+*   **Author:** Respectfully composed by clan nephew Ji Wu.
+*   **Original Biographical Text in the Genealogy:**
+
+Lord Zifu, courtesy name Yizhi, was the tenth-generation descendant of Lü Yong, the founder of the second branch of our Lü clan, and the third son of Yangyuan Gong, a Candidate for County Assistant. He was posthumously honored as Grand Master for Court Consultation (Chaoyi Dafu), and his wife, Lady Mao, was granted the title of Grand Lady of Reverence (Tai Gongren). 
+
+In previous generations, his ancestors had served as local educational officials and were renowned for their Confucian scholarship; indeed, no generation lacked scholars of steadfast conduct and profound learning. By Lord Zifu’s time, however, the family had become increasingly impoverished. Nevertheless, he strictly adhered to their frugal traditions. Filial and respectful by nature, he was deeply esteemed by his fellow villagers for his sincere and virtuous character. In the Gengchen year of the Jiaqing reign (1820), he lost his mother and mourned her with a grief that surpassed ordinary bounds. After his mourning period ended, his elder cousin, Lake Gong (Lü Zhiheng), was appointed Sub-prefect of Kavalan (Gamaran) in Taiwan. Since Lake Gong lacked assistance in managing affairs across the distant ocean, Lord Zifu, honoring their fraternal bond, readily accompanied him. At that time, Lake Gong was recognized as an outstanding and virtuous official in Fujian, and Lord Zifu contributed significantly to his success.
+
+In the Jichou year of the Daoguang reign (1829), Lord Zifu, concerned that his father, Yangyuan Gong, was elderly, frequently ill, and had long been deprived of his filial care, hastily packed his belongings and returned home. Tragically, within two months, his father passed away. Lord Zifu was consumed by the lifelong regret that his years of wandering as a guest had prevented him from fulfilling his filial duties. After completing the funeral rites, he returned to Taiwan. In the Renchen year (1832), Lake Gong passed away in the line of duty, and Lord Zifu escorted his coffin back home for burial. 
+
+Thereafter, he lived in quiet retirement at his hometown estate for over a decade. Skilled in painting, he relied on his art to sustain his increasingly difficult livelihood and to bring himself comfort in his twilight years. In the third month of the Dingwei year (1847), he passed away peacefully without illness.
+
+Lady Mao, the Grand Lady of Reverence, was the daughter of Mao Yingkui, an Imperial Academy Student. Her birth mother was surnamed Bian, and her stepmother was surnamed Fan. Lady Mao was born to Lady Fan (née Ru). Having lost her birth mother at a young age, she served her father with filial devotion and utmost respect. Her father, the Imperial Academy Student, was highly talented and broadly learned, yet he repeatedly failed the official examinations. In his later years, he developed a phlegm-related illness. Lady Mao tirelessly served him, attending to his care and managing all household affairs. Because of these heavy burdens, she did not marry Lord Yizhi until she was twenty-six. Upon marriage, she fulfilled her duties as a daughter-in-law so well that she won the affection of her parents-in-law. 
+
+Later, when Lord Zifu spent a long time in Fujian, Lady Mao took over his filial duties in caring for Yangyuan Gong. When household provisions were insufficient, she supplemented their income with needlework to provide her father-in-law with proper nourishment. When Lord Zifu eventually returned from Fujian, the family was left with nothing but bare walls. Lady Mao diligently managed their meager resources, supporting her husband and educating their children with all her might. After Lord Zifu passed away, she did her utmost to ensure that the funeral and burial of her husband and her orphaned children were conducted with proper etiquette, leaving no regrets. Throughout these decades, she endured hardships and exhaustion far beyond what ordinary people could bear. Yet, with unwavering moral fortitude, she ultimately succeeded in reviving the family’s declining fortunes and securing prosperity for future generations. Could she not be called truly virtuous?
+
+In the Gengshen year (1860), during the bandit uprisings, she took refuge in the countryside. Blessed by heaven, she navigated through peril as if it were flat ground. In the summer of the Jiazi year (1864), when Changzhou city was retaken, her son Jincheng escorted her back to the city. She repaid her son's arduous efforts with a joyful and devoted demeanor. Even in her eighties, her spirit and vitality remained robust, which everyone regarded as an auspicious sign of longevity. In the seventh month of this autumn, she felt a slight indisposition; within less than an hour, she peacefully passed away, as serene as a Buddhist entering Nirvana. Lord Zifu and Lady Mao can truly be said to have met a righteous end, free from all suffering and calamity, and entirely unburdened as they departed this world.
+
+Her son, Jincheng, had long been guided by his father's teachings and his mother's instructions. Through diligence and frugality, he built up the family fortune. He served as a Candidate for Sub-prefectural Magistrate, was appointed with the title of Assistant Prefect and promoted by one grade, and received posthumous honors for his parents according to imperial regulations. Now, in the course of continuing the compilation of our family genealogy, Jincheng recounted the virtuous deeds of his parents and asked me to write a few words. How could I, unworthy as I am, refuse this righteous request? I have briefly organized their life stories, which only further confirms the wisdom of Lord Zifu’s foresight and proves that Lady Mao’s reputation for virtue and gentleness was entirely well-founded.
+
+---
