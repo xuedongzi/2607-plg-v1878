@@ -74,3 +74,31 @@
 *   **1878 Edition**
 
 ---
+
+## 吕金诚与《毗陵吕氏增修族谱》
+
+### 1878年修谱：核心发起与总负责人
+*   **首倡修谱**：同治十年（1871年），吕金诚率先倡议纂修族谱，为项目拉开序幕。
+*   **筹措经费**：与族人吕懋勋、吕懋荣一同带头捐助经费，解决了修谱的启动资金问题。
+*   **总司各职**：在整个修谱过程中，吕金诚负责统筹管理各项日常事务，勤勉有功，是实际上的总负责人。
+
+### 1905年修谱：主要经费承担者与核心编纂者
+*   **承担半数经费**：光绪二十四年（1898年），吕金诚与吕继午共同承担了本次修谱十分之五的巨额经费。
+*   **填补资金缺口**：当修谱经费出现不足时，吕金诚再次独自承担了剩余的费用，确保了项目顺利完成。
+*   **负责校对编纂**：与吕继午等人一同全力承担了族谱的校对和编纂工作，付出了大量辛劳。
+
+---
+
+## Lü Jincheng and the *Piling Lü Clan Augmented Genealogy*
+
+### The 1878 Genealogy Compilation: Core Initiator and General Director
+*   **Pioneering the Initiative:** In the tenth year of the Tongzhi reign (1871), Lü Jincheng took the lead in proposing the compilation of the clan genealogy, officially kicking off the project.
+*   **Fundraising:** He, along with fellow clansmen Lü Maoxun and Lü Maorong, spearheaded the donation of funds, successfully resolving the issue of initial capital required to launch the compilation.
+*   **Overall Management:** Throughout the entire compilation process, Lü Jincheng was responsible for coordinating and managing all daily administrative affairs. Through his diligence and significant contributions, he served as the de facto general director of the project.
+
+### The 1905 Genealogy Compilation: Primary Financial Backer and Core Editor
+*   **Funding Half the Project:** In the twenty-fourth year of the Guangxu reign (1898), Lü Jincheng and Lü Jiwu jointly covered fifty percent of the massive financial costs for this genealogy compilation.
+*   **Covering the Funding Shortfall:** When the project faced a budget deficit, Lü Jincheng once again stepped up to personally cover the remaining expenses, ensuring the project was successfully completed.
+*   **Overseeing Proofreading and Editing:** Together with Lü Jiwu and others, he fully committed to the proofreading and editorial work of the genealogy, dedicating tremendous time and effort to the task.
+
+---
