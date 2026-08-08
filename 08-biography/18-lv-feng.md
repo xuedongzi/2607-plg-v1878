@@ -8,10 +8,26 @@
     - 祖椿，字润身，号柏萝。生道光甲辰八月初一日巳时，卒同治辛未四月十四日子时。配谈氏，太学生讳福南长女。生道光戊申十一月初三日卯时，卒光绪辛卯七月初一日丑时。合葬三宝桥父茔穆穴，子山午兼癸丁向。子一贻谷，早卒，以祖绶次子泽明兼祧。女一，适光绪戊子科举人、己丑科考取内阁中书、戊戌科进士、玉牒馆保奏以知府用、盐运使街分发江西署理瑞州府知府赵椿年。
     - 女一（吕凤）适赵椿年（字剑秋）
 
-* 吕维纯（成19）手稿记录
-    - 吕维纯时吕泽明四子。因为吕泽明兼祧润身公祠，吕泽明是吕凤的胞弟，吕维纯的姑母。
+* 吕维纯（成19）手稿《家的来源》记录
+    - 吕维纯是吕泽明四子。因为吕泽明兼祧润身公祠，吕泽明是吕凤的胞弟，吕维纯的姑母。
     - 记录在雪洞巷家祠堂列祖神像
         * 神像“尚有 孟康公 谈孺人”，这是叔猷公的长兄，孟康公有一子为“润身公 谈孺人”。润身公只生有一女为吕凤，是常州女界名仕。能诗画。适赵剑秋（在北洋军政府时期任财政次长）。因无子，故由父亲泽民（应该是泽明）公继承。另外伯父少铨公（陈恭人、朱夫人）也有神像。
+
+---
+
+## Lü Feng (Lady Tonghua) – 18th Generation
+
+### Records from the *Piling Lü Clan Genealogy*
+
+*   **Genealogical Record of Lü Zuchun in the 1905 Edition:**
+    *   Zuchun, courtesy name Runshen, pseudonym Bailuo. Born on the 1st day of the 8th lunar month in the Jiachen year of the Daoguang reign, during the Si hour. Passed away on the 14th day of the 4th lunar month in the Xinwei year of the Tongzhi reign, during the Zi hour. His wife was Lady Tan, the eldest daughter of Tan Funan, an Imperial Academy Student. She was born on the 3rd day of the 11th lunar month in the Wushen year of the Daoguang reign, during the Mao hour, and passed away on the 1st day of the 7th lunar month in the Xinmao year of the Guangxu reign, during the Chou hour. The couple was buried together in the Mu tomb site of their father’s ancestral cemetery at Sanbao Bridge, with the feng shui orientation of "Zi Shan Wu Jian Gui Ding Xiang." They had one son, Yigu, who passed away at a young age. Consequently, Zeming, the second son of Zushou, was adopted under the dual-heir system to continue the lineage. They also had one daughter, who married Zhao Chunnian. Zhao passed the provincial exam in the Wuzi year of the Guangxu reign (1888), was selected as a Drafter in the Grand Secretariat in the Jichou year (1889), and successfully passed the metropolitan exam to become a Jinshi in the Wuxu year (1898). Later, recommended by the Jade Register Bureau, he was appointed as a Prefect with the title of Salt Transport Commissioner, assigned to Jiangxi Province, and served as the Acting Prefect of Ruizhou Prefecture.
+    *   Their daughter, Lü Feng, married Zhao Chunnian (courtesy name Jianqiu).
+
+### Records from Lü Weichun’s (19th Generation) Manuscript “The Origin of My Family"
+
+*   Lü Weichun was the fourth son of Lü Zeming. Because Lü Zeming served as the dual-heir for the Runshen Gong shrine, and Lü Zeming was Lü Feng’s younger full-brother, Lü Feng was Lü Weichun’s paternal aunt.
+*   **Records regarding the ancestral portraits enshrined in the Xuedong Alley Family Shrine:**
+    *   There is a portrait inscribed with "Shangyou, Mengkang Gong, and Lady Tan." Mengkang Gong was the eldest brother of Shuyou Gong (Lü Jincheng). Mengkang Gong had one son, Runshen Gong (and his wife, Lady Tan). Runshen Gong had only one daughter, Lü Feng, who was a renowned female figure in Changzhou. She was highly skilled in poetry and painting. She married Zhao Jianqiu, who served as the Vice Minister of Finance during the Beiyang Government. Because she had no sons, her father, Zeming Gong, inherited her ancestral line. Additionally, portraits of her uncle, Shaoquan Gong (along with Lady Chen and Lady Zhu), were also enshrined.
 
 ---
 
