@@ -22,6 +22,6 @@
 
 ### [Block Mermaid Diagram](./yanzhi-e2.html)
 
-### [Test Tree Diagram](./yanzhi-e3.md)
+### [Pure Text Tree Diagram](./yanzhi-e3.md)
 
 ---
