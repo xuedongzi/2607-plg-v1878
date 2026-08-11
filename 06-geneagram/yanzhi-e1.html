@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mermaid in Chrome</title>
+    <!-- Load Mermaid from CDN -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+
+    <!-- Your Mermaid Diagram -->
+    <pre class="mermaid">
+graph LR
+    A[1. Lü Yanzhi 吕延之<br>Duke of Songshan · distant ancestor] --> B[2. Lü Wei 吕渭]
+    A --> Z[2. Lü Xun 吕勋]
+    B --> C[3. Lü Wen 吕温]
+    B --> C2[3. Lü Gong 吕恭]
+    B --> C3[3. Lü Jian 吕俭]
+    B --> C4[3. Lü Rang 吕让]
+    C --> D[4. Lü Zhen 吕镇]
+    D --> E[5. Lü Xu 吕顼]
+    D --> E2[5. Lü Huang 吕璜]
+    E --> F[6. Lü Tao 吕韬]
+    F --> G[7. Lü Mengqi 吕梦奇]
+    F --> G2[7. Lü Yuqi 吕毓奇]
+    %% Lü Mengzheng branch
+    G --> H[8. Lü Guitu 吕龟图]
+    H --> I[9. Lü Mengzheng 吕蒙正<br>Famous Northern Song Chancellor]
+    %% Lü Yijian branch
+    G --> H2[8. Lü Guixiang 吕龟祥]
+    H2 --> I2[9. Lü Mengheng 吕蒙亨]
+    H2 --> I3[9. Lü Mengxun 吕蒙巽]
+    H2 --> I4[9. Lü Mengzhou 吕蒙周]
+    I2 --> J[10. Lü Yijian 吕夷简<br>Famous Northern Song Chancellor]
+    I2 --> J2[10. Lü Zongjian 吕宗简]
+    I2 --> J3[10. Lü Yaojian 吕尧简]
+    J --> K[11. Lü Gongchuo 吕公绰]
+    J --> K2[11. Lü Gongsu 吕公餗]
+    J --> K3[11. Lü Gongbi 吕公弼<br>Military Affairs Commissioner]
+    J --> K4[11. Lü Gongzhu 吕公著<br>Chancellor]
+    J --> K5[11. Lü Gongru 吕公孺]
+    K4 --> L[12. Lü Xizhe 吕希哲]
+    K4 --> L2[12. Lü Xiji 吕希绩]
+    K4 --> L3[12. Lü Xichun 吕希纯]
+    L --> M[13. Lü Haowen 吕好问<br>Right Vice Director, Dept. of State Affairs]
+    L --> M2[13. Lü Yiwen 吕疑问]
+    L --> M3[13. Lü Qiewen 吕切问]
+    M --> N[14. Lü Benzhong 吕本中]
+    M --> N2[14. Lü Kuizhong 吕揆中]
+    M --> N3[14. Lü Pengzhong 吕弸中]
+    M --> N4[14. Lü Yongzhong 吕用中]
+    M --> N5[14. Lü Chenzhong 吕忱中]
+    N --> O[15. Lü Dayou 吕大猷]
+    N --> O2[15. Lü Datong 吕大同]
+    O2 --> P[16. Lü Zutai 吕祖泰]
+    P --> Q[17. Lü Feng 吕凤]
+    P --> Q2[17. Lü Hua 吕华]
+    P --> Q3[17. Lü Chun 吕春]
+    P --> Q4[17. Lü Lü 吕绿]
+    Q --> R[18. Lü Ling 吕龄]
+    R --> S[19. Lü Xing 吕行]
+    S --> T[20. Lü Xia 吕霞]
+    T --> U[21. Lü Guangbi 吕光弼]
+    T --> U2[21. Lü Guangding 吕光鼎]
+    U --> V[22. Lü Neng 吕能]
+    V --> W[23. Lü Cheng 吕成<br>Founding ancestor, Wujin branch]
+    V --> W2[23. Lü Sheng 吕盛<br>Founding ancestor, Weidu branch]
+    V --> W3[23. Lü Mao 吕茂<br>Founding ancestor, Tangyang branch]
+    V --> W4[23. Lü Wu 吕戊<br>Founding ancestor, Shuangmiaoli branch]
+
+    classDef linked fill:#fff3cd,stroke:#c9970f,stroke-width:2px,color:#7a4d00,font-weight:bold;
+    class A,B,C,G,I,J,K,K2,K3,K4,K5,L,L2,L3,M,N,P linked;
+
+    click A "https://baike.baidu.com/item/吕延之" "_blank"
+    click B "https://baike.baidu.com/item/吕渭" "_blank"
+    click C "https://baike.baidu.com/item/吕温" "_blank"
+    click G "https://baike.baidu.com/item/吕梦奇" "_blank"
+    click I "https://baike.baidu.com/item/吕蒙正/1074520" "_blank"
+    click J "https://baike.baidu.com/item/吕夷简" "_blank"
+    click K "https://baike.baidu.com/item/吕公绰" "_blank"
+    click K2 "https://baike.baidu.com/item/吕公餗" "_blank"
+    click K3 "https://baike.baidu.com/item/吕公弼" "_blank"
+    click K4 "https://baike.baidu.com/item/吕公著" "_blank"
+    click K5 "https://baike.baidu.com/item/吕公孺" "_blank"
+    click L "https://baike.baidu.com/item/吕希哲" "_blank"
+    click L2 "https://baike.baidu.com/item/吕希绩" "_blank"
+    click L3 "https://baike.baidu.com/item/吕希纯" "_blank"
+    click M "https://baike.baidu.com/item/吕好问" "_blank"
+    click N "https://baike.baidu.com/item/吕本中" "_blank"
+    click P "https://baike.baidu.com/item/吕祖泰" "_blank"
+    </pre>
+
+    <p style="font-family: sans-serif; color: #555; font-size: 14px;">
+        <span style="display:inline-block;width:14px;height:14px;background:#fff3cd;border:2px solid #c9970f;vertical-align:middle;"></span>
+        Gold-bordered nodes are clickable and link to a Baidu Baike (百度百科) reference entry.
+    </p>
+
+</body>
+</html>
