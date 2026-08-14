@@ -23,7 +23,7 @@ His wife, Lady Yang, relocated with their son to the prefectural city, becoming 
 
 ---
 
-## 始迁祖春鹝公暨配杨太孺人合传
+## 始迁祖春鸝公暨配杨太孺人合传
 
 君姓吕氏，讳成，字春鹝。先世籍河南，宋南渡，十世祖讳好问，始居浙江婺州。七世祖讳祖泰，徙居江南宜兴县。考讳能，洪武中以都指挥使官京师，母储氏。
 
@@ -55,7 +55,7 @@ His wife, Lady Yang, relocated with their son to the prefectural city, becoming 
 
 诗说：孝子的孝心永不枯竭，永远赐予你福禄。又说：子子孙孙，不要废弃引之的孝道。只有孝才能感化妻子，使家族发展壮大，我所以详细记载这些，是为了表明吕氏成为一郡望族是有原因的，并且告诫吕成的子孙，希望他们不要忘记祖先的德行。
 
-### 📖 Joint Biography of Lv Cheng and His Wife Lady Yang
+### Joint Biography of Lv Cheng and His Wife Lady Yang
 
 Mr. Lv Cheng, surnamed Lv with the given name Cheng and the style name Chunyi, traced his ancestry back to Henan. During the Southern Song Dynasty's southern migration, his tenth-generation ancestor, Lv Haowen, initially settled in Wuzhou, Zhejiang. His seventh-generation ancestor, Lv Zutai, relocated to Yixing County in the Jiangnan region. His father, Lv Neng, served as a commander-in-chief in the capital during the Hongwu reign period of the Ming Dynasty, and his mother was surnamed Chu.
 
