@@ -1,6 +1,6 @@
-# 宗祠
+# 宗祠 Shrine
 
-## 毗陵吕氏族谱 记录
+## 毗陵吕氏族谱 记录 Record Keeping
 * 毗陵吕氏族谱记录
     * 1840年版
     * 1878年版
@@ -10,9 +10,9 @@
 
 ---
 
-### 新廟巷支祠 二分
+### 新廟巷支祠 二分 Xingmiao Lane Second Branch
 
-* v1905年版
+v1905年版记录 青果巷二分支祠，与原新廟巷支祠类似并增补
 
 * 饗堂中室奉祀 第五世 
 分諱鏞公曁配卞孺人神主
@@ -45,7 +45,7 @@
 
 ---
 
-### 二分支祠 产权记录
+### 二分支祠 产权记录 The Recording of the Shrine's Property Rights
 
 ```text
 右祠門四間二廳三間東首書房一間三層饗堂三間坐落郡城新城隍廟東首東右廂呂宗祠戶 單元孫金誠收執
@@ -75,11 +75,11 @@
 
 ---
 
-### 二分支祠 历史
+### 二分支祠 历史 The History of the Second Branch Shrine
 
 祠门一间一衙享堂三间坐落阳湖县东右厢基地係分字九十七号平一分
 
-* 莱承公二分支祠记 （吕镜为成11，二分始祖 镛6，也是吕适参三公的祖父）
+* 莱承公二分支祠记 （吕镜为成11，二分始祖 镛6，也是吕适 参三公的祖父）
 
 ```text
 今之宗祠古之祖庙也庙制分定祠制因之古者自诸
@@ -119,7 +119,7 @@
 予之志也康熙四十三年甲申八月六世孙镜谨识
 ```
 
-* 成13 添建 (凤来凤翙为吕适参三公二哥五弟)
+* 成13 添建 (凤来凤翙为吕适 参三公二哥五弟)
 
 ```text
 此莱承公所建二分支祠也自讳镛公至吾父辈共
@@ -174,7 +174,7 @@
 識
 ```
 
-#### 白话 加标点
+#### 白话 加标点 Modern Chinese Version
 
 * v1878
 
@@ -188,7 +188,7 @@
 
 待日后时机成熟，祠门对面的门面地块应当改建为祖绶配陈氏的节孝坊，后世子孙应当永远遵守这条规制。光绪乙巳年仲冬，裔孙金诚谨识。
 
-#### 对应历史事件表格
+#### 对应历史事件表格 The Corresponding Historical Events
 
 * v1878
 
@@ -211,5 +211,72 @@
 | 光绪癸巳年 | 1893年 | 宗祠扩建工程全部竣工 |
 | 光绪己亥年 | 1899年 | 购置临街产业，补充宗族祭祀公产 |
 | 光绪乙巳年 | 1905年 | 金诚补记完整建祠始末，载入族谱 |
+
+---
+
+## Summary of the Piling Lü Clan Genealogy: 2nd Branch Shrine Recording
+
+This document is a summary of the content from the Chinese text above, which records information about the sencond branch ancestral hall of the Piling Lü Clan, covering enshrined ancestors, shrine property rights, and key milestones of the shrine's history.
+
+---
+
+### Enshrined Ancestors (New Temple Lane Sub-branch Shrine, 1905 Edition)
+
+The central hall of the offering hall of the shrine enshrines the following ancestors and their spouses, with subsequent generations also collectively enshrined by tradition:
+
+* 5th Generation: Ancestor Lü Yong (镛) and his wife Lady Bian
+* 6th Generation: Ancestor Lü Lian (濂) and his wife Lady Wang
+* 7th Generation: Ancestor Lü Ersi (爾思) and his wife Lady Yuan
+* 8th Generation: Ancestor Lü Xinquan (心泉) and his wife Lady Shu
+* 9th Generation: Ancestor Lü Rongfu (榮甫), his first wife Lady Zhao, and his subsequent wives Lady Chen and Lady Wu
+* 10th Generation: Ancestor Lü Jieshen (介紳), his wife Lady Yang, and his side concubine Lady Lu; as well as Ancestor Lü Linwu (臨午) and his wife Lady Wu
+* 11th Generation: Ancestor Lü Laicheng (萊承) and his wife Lady Zhou
+* 12th Generation: Ancestor Lü Mingwan (命頑) and his wife Lady Yang; Ancestor Lü Dianqing (殿擎) and his wife Lady Gao; Ancestor Lü Yuyugong (愈愚) and his wife Lady Zhao
+
+Other generations are also included.
+
+---
+
+### Shrine Property Rights
+
+The recorded property of the second sub-branch ancestral hall is located east of the New City God Temple in the county seat:
+
+Shrine core property‌: 4 shrine gate rooms, 3 halls, 1 three-story study room on the east side, and 3 offering hall rooms. The property deed is held and kept by Lü Jincheng, a descendant of the Lü clan under the household head of the Lü ancestral hall in the east right wing.
+
+Total registered land area‌: 6 points 9 cents 6 mill 9 filaments 7忽, converted to a total area of 464.67 ㎡, with details as follows:
+
+| Cadastrallot number | Ancient genealogy recorded area | Converted square meter area |
+| --- | --- | --- |
+| Fen character No.64 | 3 cents 5 li | 233.33㎡ |
+| Fen character No.62 | 7 li 5 hao | 50.00㎡ |
+| No number | 3 li 9 hao 1 si 6 hu | 26.11㎡ |
+| No number | 6 li 7 hao 2 si | 44.80㎡ |
+| No.111 | 1 fen 5 li 4 hao 6 si 1 hu | 103.07㎡ |
+| No number | 1 li 1 hao | 7.33㎡ |
+
+Street-facing property opposite the main shrine gate‌: This land is registered under the official shrine property household of "Lü Shen San" of the Lü clan, and the corresponding title deed is also kept by Lü Jincheng.
+
+---
+
+### Key Milestones of the Second Branch Shrine History
+
+The construction and renovation process of the second sub-branch ancestral hall of the Lü clan spans hundreds of years, with important events recorded in detail in the 1840, 1878 and 1905 editions of the Piling Lü Clan Genealogy:
+
+1704 (Kangxi Jiashen Year)‌: Lü Jing, the 11th generation descendant of the clan (style name Laicheng, belonging to the Second Branch), built the original ancestral hall at the southeast corner of his residence, with only 3 offering hall rooms. He recorded the origin of the clan and the purpose of building the shrine, and stated that he temporarily followed the ritual system of one shrine, leaving space for future descendants to expand the building after achieving family glory.  There were two subsequent renovations and additions to the original Second Branch Shrine.
+
+1791 (Qianlong 56th Year)‌: Descendants Lü Fenglai and Lü Fenghui donated the street-facing house at the entrance of the original shrine to the clan, added 1 shrine gate room, and enshrined the donor Lü Guangdu in the shrine as a mark of filial piety.
+
+1797 (Jiaqing 2nd Year)‌: The shrine space was too narrow to hold the memorial tablets of all the ladies of the clan, so the clan purchased 3 flat houses behind the shrine from a member of the Sun family, added space for enshrinement, and transferred 9 li of land tax to the household of Sun Xiaoyou for subsequent tax payment.
+1860 (Xianfeng Gengshen Year)‌: The ancestral hall was completely destroyed in the war during the Taiping Rebellion.
+1870 (Tongzhi Gengwu Year)‌: Descendant Lü Jincheng purchased the new site of Fen character No.62 to prepare for the reconstruction of the shrine.
+
+1871 (Tongzhi Xinwei Year)‌: The reconstruction of the main body of the ancestral hall started, and was completed in the leap March of the same year. The memorial tablets of the ancestors were welcomed back to the shrine for enshrinement. After the reconstruction, the two rooms on the east and west sides of the shrine gate were leased to others, generating a monthly rent of 700 Wen to supplement the sacrifice expenses. The total cost of the reconstruction, decoration and making of the shrines was more than 780 strings of cash.
+1878 (Guangxu Wuyin Year)‌: Lü Jincheng wrote a record of the reconstruction process of the shrine, which was officially included in the 1878 edition of the clan genealogy.
+
+1893 (Guangxu Guisi Year)‌: The continuous expansion project led by Lü Jincheng was fully completed. On the basis of the original reconstruction, the scale was expanded to 4 head gate rooms, 3 halls and 3 offering hall rooms, with a total cost of more than 1540 strings of cash. The rent from the gate houses was used for the tomb sweeping activities at Shita and the payment of land tax.
+
+1899 (Guangxu Jihai Year)‌: Lü Jincheng purchased the two plots opposite the shrine gate originally owned by the Wang family, built 2 facade rooms, 2-story buildings with 4 rooms upstairs and downstairs, plus waterside pavilions and lean-to houses. All the cost of 840 strings of cash was donated to the branch of Lü Yizhi, which was used for collecting land rent, purchasing grain for sacrifices and repairing clan tombs. The genealogy explicitly stipulates that the facade plot opposite the shrine should be converted into a memorial archway of chastity and filial piety for Lü Zushou and his wife Lady Chen in the future, which shall be abided by all descendants forever.
+
+1905 (Guangxu Yisi Year)‌: Lü Jincheng wrote a complete record covering all the expansion and property donation events of the shrine, which was officially included in the 1905 edition of the Piling Lü Clan Genealogy.
 
 ---
