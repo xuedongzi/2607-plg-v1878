@@ -2,7 +2,7 @@
 
 ---
 
-### 乾隆五十六年歲次辛亥重修族譜序 （1785）
+### 乾隆五十六年歲次辛亥重修族譜序 （1791）
 
 ```text
 自昔宗法廢而譜牒興譜之作也尊祖敬宗收族而大宗
@@ -73,7 +73,7 @@
 
 ---
 
-### Preface to the Revised Genealogy of the Lü Clan in Piling (1785)
+### Preface to the Revised Genealogy of the Lü Clan in Piling (1791)
 
 Since ancient times, the patriarchal clan system has been abolished, and genealogical records have flourished. The creation of genealogical records aims to honor ancestors, respect the clan, and unite family members, embodying the concepts of the major and minor lineages. What is referred to as establishing the lineage system in "The Rites of Zhou" is the origin of genealogical records. In the Tang Dynasty, social status was highly valued, and the study of genealogy was further explored. In the Song Dynasty, the Ouyang and Su families advocated the establishment of genealogical diagrams and explanations, clarifying the principles and meanings, thus becoming the model for genealogical research in later generations.
 
