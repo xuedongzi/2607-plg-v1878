@@ -1,0 +1,3752 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>毗陵吕氏族谱 大分世系圖</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #f6f1e7;
+  --surface: #fbf8f1;
+  --surface-2: #f0e8d8;
+  --ink: #2b2420;
+  --ink-soft: #6b5c4d;
+  --line: #d9c8a5;
+  --accent: #8c2b26;
+  --accent-soft: #a8763f;
+  --shadow: 0 1px 2px rgba(43,36,32,0.06), 0 4px 16px rgba(43,36,32,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1b1611;
+    --surface: #241d16;
+    --surface-2: #2c2318;
+    --ink: #ece2d0;
+    --ink-soft: #b3a48c;
+    --line: #4a3d2c;
+    --accent: #e0776c;
+    --accent-soft: #c9a86a;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.35);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1b1611;
+  --surface: #241d16;
+  --surface-2: #2c2318;
+  --ink: #ece2d0;
+  --ink-soft: #b3a48c;
+  --line: #4a3d2c;
+  --accent: #e0776c;
+  --accent-soft: #c9a86a;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.35);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans TC", "Noto Sans SC", sans-serif;
+  line-height: 1.6;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding: 48px 28px 96px; }
+h1, h2, h3 {
+  font-family: "Noto Serif TC", "Noto Serif SC", serif;
+  font-weight: 700;
+  text-wrap: balance;
+  margin: 0 0 8px;
+}
+h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: 0.02em; }
+h2 { font-size: 22px; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 20px; }
+header.top { margin-bottom: 44px; }
+.eyebrow {
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent-soft); font-weight: 600; margin-bottom: 10px;
+}
+.lede { color: var(--ink-soft); max-width: 62ch; font-size: 15px; }
+.stat-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.stat {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 18px; box-shadow: var(--shadow); min-width: 108px;
+}
+.stat b { display: block; font-family: "Noto Serif TC", serif; font-size: 22px; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12px; color: var(--ink-soft); }
+.legend {
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px 18px; margin: 20px 0 36px; font-size: 13px; color: var(--ink-soft);
+  box-shadow: var(--shadow);
+}
+.legend .sw { display: inline-flex; align-items: center; gap: 6px; }
+.legend .dot { width: 13px; height: 13px; border-radius: 3px; display: inline-block; border: 1px solid var(--line); }
+section.overview, section.index { margin-bottom: 48px; }
+.diagram-frame {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 18px; overflow-x: auto; box-shadow: var(--shadow);
+}
+.diagram-frame pre.mermaid { margin: 0; }
+.note { font-size: 13px; color: var(--ink-soft); margin-top: 10px; }
+.chip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.chip {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 12px; text-decoration: none; color: var(--ink); font-size: 13px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.chip:hover { border-color: var(--accent-soft); transform: translateY(-1px); }
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip-num {
+  font-family: "Noto Serif TC", serif; font-weight: 700; color: var(--accent);
+  font-size: 12px; min-width: 20px;
+}
+.chip-name { flex: 1; }
+.chip-count { color: var(--ink-soft); font-variant-numeric: tabular-nums; font-size: 12px; }
+.branch {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: 22px 24px 26px; margin-bottom: 22px; box-shadow: var(--shadow);
+  scroll-margin-top: 20px;
+}
+.branch-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
+.branch-badge {
+  font-family: "Noto Serif TC", serif; font-weight: 700; font-size: 14px;
+  background: var(--accent); color: var(--surface); border-radius: 7px;
+  width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.branch-head-text { flex: 1; min-width: 0; }
+.branch-head-text h3 { font-size: 18px; }
+.breadcrumb { font-size: 12.5px; color: var(--ink-soft); margin: 0; }
+.branch-count {
+  font-size: 12.5px; color: var(--ink-soft); white-space: nowrap; margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.back-top {
+  display: inline-block; margin-top: 14px; font-size: 12.5px; color: var(--accent-soft);
+  text-decoration: none; border-bottom: 1px dotted var(--accent-soft);
+}
+.back-top:hover { color: var(--accent); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; }
+</style>
+</head>
+<body>
+
+
+<div class="wrap" id="top">
+  <header class="top">
+    <div class="eyebrow">毗陵吕氏族谱 · 大分世系圖 · 1905年版重建</div>
+    <h1>毗陵吕氏族谱 大分世系圖</h1>
+    <p class="lede">
+      本图基于 <code>c1f-1905.md</code> 生成：第5世至第14世取自1840年版谱牒，第15世及以后取自1905年版《大分世系圖（十五世起）世系表》，
+      两部分在14→15世衔接处已核对，父名均能在上一世名单中找到对应。全图共 1131 人，
+      跨越第5世至第20世，因规模较大，按世系自然分支拆解为 45 幅可读的分支图，
+      通过下方总览图或分支索引跳转查看。
+    </p>
+    <div class="stat-row">
+      <div class="stat"><b>1131</b><span>总人数</span></div>
+      <div class="stat"><b>16</b><span>世代跨度（5–20世）</span></div>
+      <div class="stat"><b>45</b><span>分支图</span></div>
+      <div class="stat"><b>16</b><span>骨干世系节点</span></div>
+    </div>
+  </header>
+
+  <div class="legend">
+    <span class="sw"><span class="dot" style="background:#eee3cd"></span>5–8世</span>
+    <span class="sw"><span class="dot" style="background:#e3cd9e"></span>9–11世</span>
+    <span class="sw"><span class="dot" style="background:#c9a86a"></span>12–14世</span>
+    <span class="sw"><span class="dot" style="background:#a8763f"></span>15–17世</span>
+    <span class="sw"><span class="dot" style="background:#8c2b26"></span>18–20世</span>
+    <span class="sw"><span class="dot" style="background:#fbf3e4;border-color:#8c2b26;border-width:2px"></span>圆角红框 = 分支入口（点击跳转 / 见下方索引）</span>
+  </div>
+
+  <section class="overview">
+    <h2>世系总览（第5世 – 第12世骨干）</h2>
+    <div class="diagram-frame">
+      <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N0["5｜鉉（長子）"]
+  N2["6｜崙（次子）"]
+  N5["7｜栢（次子）"]
+  N21["8｜應陽（三子）"]
+  N45["9｜尚仁（長子）"]
+  N63["10｜方惠（四子）"]
+  N104["11｜岱（次子）"]
+  N156["12｜錦"]
+  N106["11｜恆（三子）"]
+  N3["6｜沂（三子）"]
+  N11["7｜梁（三子）"]
+  N28["8｜時康（四子）"]
+  N53["9｜德隆（長子）"]
+  N77["10｜方慶（四子）"]
+  N111["11｜爲麟（次子）"]
+  N54["9｜治隆（次子）"]
+  N1(["6｜崑（長子）支\n7人"])
+  N20(["8｜志學（五子）支\n1人"])
+  N43(["9｜尙智（三子）支\n3人"])
+  N44(["9｜尙義（次子）支\n2人"])
+  N263(["13｜文會（次子）支\n12人"])
+  N264(["13｜文煥（長子）支\n12人"])
+  N265(["13｜河（五子）支\n61人"])
+  N266(["13｜洋（三子）支\n18人"])
+  N267(["13｜潤（六子）支\n51人"])
+  N268(["13｜潽（四子）支\n57人"])
+  N105(["11｜崧（長子）支\n2人"])
+  N162(["12｜琨（長子）支\n50人"])
+  N163(["12｜鑑（次子）支\n58人"])
+  N107(["11｜華（四子）支\n22人"])
+  N64(["10｜方戊（長子）支\n1人"])
+  N65(["10｜玉（三子）支\n1人"])
+  N66(["10｜琮（次子）支\n1人"])
+  N22(["8｜明陽（四子）支\n70人"])
+  N23(["8｜朝陽（次子）支\n1人"])
+  N24(["8｜正陽（長子）支\n2人"])
+  N6(["7｜梓（四子）支\n1人"])
+  N7(["7｜楠（長子）支\n2人"])
+  N8(["7｜橋（三子）支\n4人"])
+  N9(["7｜材（四子）支\n4人"])
+  N10(["7｜林（五子）支\n8人"])
+  N26(["8｜時亨（三子）支\n54人"])
+  N27(["8｜時和（次子）支\n6人"])
+  N75(["10｜方庭（長子）支\n16人"])
+  N76(["10｜方廣（三子）支\n47人"])
+  N108(["11｜儒麟（長子）支\n28人"])
+  N109(["11｜兆麟支\n1人"])
+  N110(["11｜彥麟支\n49人"])
+  N167(["12｜宗正（長子）支\n74人"])
+  N168(["12｜宗端支\n25人"])
+  N169(["12｜宗謙支\n13人"])
+  N112(["11｜詠麟支\n9人"])
+  N113(["11｜雋麟支\n20人"])
+  N78(["10｜方賡（次子）支\n53人"])
+  N82(["10｜方奏支\n90人"])
+  N83(["10｜方調支\n44人"])
+  N84(["10｜方鼐支\n32人"])
+  N55(["9｜綬隆支\n73人"])
+  N29(["8｜時泰（長子）支\n13人"])
+  N12(["7｜檟（次子）支\n2人"])
+  N13(["7｜相（長子）支\n15人"])
+  N0 --> N1
+  N0 --> N2
+  N0 --> N3
+  N2 --> N5
+  N2 --> N6
+  N2 --> N7
+  N2 --> N8
+  N5 --> N20
+  N5 --> N21
+  N5 --> N22
+  N5 --> N23
+  N5 --> N24
+  N21 --> N43
+  N21 --> N44
+  N21 --> N45
+  N45 --> N63
+  N45 --> N64
+  N45 --> N65
+  N45 --> N66
+  N63 --> N104
+  N63 --> N105
+  N63 --> N106
+  N63 --> N107
+  N104 --> N156
+  N156 --> N263
+  N156 --> N264
+  N156 --> N265
+  N156 --> N266
+  N156 --> N267
+  N156 --> N268
+  N106 --> N162
+  N106 --> N163
+  N3 --> N9
+  N3 --> N10
+  N3 --> N11
+  N3 --> N12
+  N3 --> N13
+  N11 --> N26
+  N11 --> N27
+  N11 --> N28
+  N11 --> N29
+  N28 --> N53
+  N28 --> N54
+  N28 --> N55
+  N53 --> N75
+  N53 --> N76
+  N53 --> N77
+  N53 --> N78
+  N77 --> N108
+  N77 --> N109
+  N77 --> N110
+  N77 --> N111
+  N77 --> N112
+  N77 --> N113
+  N111 --> N167
+  N111 --> N168
+  N111 --> N169
+  N54 --> N82
+  N54 --> N83
+  N54 --> N84
+  click N1 "#branch-N1" "查看崑支详情"
+  click N20 "#branch-N20" "查看志學支详情"
+  click N43 "#branch-N43" "查看尙智支详情"
+  click N44 "#branch-N44" "查看尙義支详情"
+  click N263 "#branch-N263" "查看文會支详情"
+  click N264 "#branch-N264" "查看文煥支详情"
+  click N265 "#branch-N265" "查看河支详情"
+  click N266 "#branch-N266" "查看洋支详情"
+  click N267 "#branch-N267" "查看潤支详情"
+  click N268 "#branch-N268" "查看潽支详情"
+  click N105 "#branch-N105" "查看崧支详情"
+  click N162 "#branch-N162" "查看琨支详情"
+  click N163 "#branch-N163" "查看鑑支详情"
+  click N107 "#branch-N107" "查看華支详情"
+  click N64 "#branch-N64" "查看方戊支详情"
+  click N65 "#branch-N65" "查看玉支详情"
+  click N66 "#branch-N66" "查看琮支详情"
+  click N22 "#branch-N22" "查看明陽支详情"
+  click N23 "#branch-N23" "查看朝陽支详情"
+  click N24 "#branch-N24" "查看正陽支详情"
+  click N6 "#branch-N6" "查看梓支详情"
+  click N7 "#branch-N7" "查看楠支详情"
+  click N8 "#branch-N8" "查看橋支详情"
+  click N9 "#branch-N9" "查看材支详情"
+  click N10 "#branch-N10" "查看林支详情"
+  click N26 "#branch-N26" "查看時亨支详情"
+  click N27 "#branch-N27" "查看時和支详情"
+  click N75 "#branch-N75" "查看方庭支详情"
+  click N76 "#branch-N76" "查看方廣支详情"
+  click N108 "#branch-N108" "查看儒麟支详情"
+  click N109 "#branch-N109" "查看兆麟支详情"
+  click N110 "#branch-N110" "查看彥麟支详情"
+  click N167 "#branch-N167" "查看宗正支详情"
+  click N168 "#branch-N168" "查看宗端支详情"
+  click N169 "#branch-N169" "查看宗謙支详情"
+  click N112 "#branch-N112" "查看詠麟支详情"
+  click N113 "#branch-N113" "查看雋麟支详情"
+  click N78 "#branch-N78" "查看方賡支详情"
+  click N82 "#branch-N82" "查看方奏支详情"
+  click N83 "#branch-N83" "查看方調支详情"
+  click N84 "#branch-N84" "查看方鼐支详情"
+  click N55 "#branch-N55" "查看綬隆支详情"
+  click N29 "#branch-N29" "查看時泰支详情"
+  click N12 "#branch-N12" "查看檟支详情"
+  click N13 "#branch-N13" "查看相支详情"
+  class N0,N2,N5,N21,N3,N11,N28 g1
+  class N45,N63,N104,N106,N53,N77,N111,N54 g2
+  class N156 g3
+  class N1,N20,N43,N44,N263,N264,N265,N266,N267,N268,N105,N162,N163,N107,N64,N65,N66,N22,N23,N24,N6,N7,N8,N9,N10,N26,N27,N75,N76,N108,N109,N110,N167,N168,N169,N112,N113,N78,N82,N83,N84,N55,N29,N12,N13 leaf
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+classDef leaf fill:#fbf3e4,stroke:#8c2b26,stroke-width:2px,color:#8c2b26
+</pre>
+    </div>
+    <p class="note">骨干节点（方框）为拥有较多后代、因而单独成支的祖先；圆角节点为分支入口，标注该支后代总人数，点击后（或使用下方索引）跳转至该支完整世系图。</p>
+  </section>
+
+  <section class="index">
+    <h2>分支索引（45 支，按谱序排列）</h2>
+    <div class="chip-grid">
+      <a class="chip" href="#branch-N1"><span class="chip-num">01</span><span class="chip-name">6世 崑支</span><span class="chip-count">7人</span></a>
+<a class="chip" href="#branch-N20"><span class="chip-num">02</span><span class="chip-name">8世 志學支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N43"><span class="chip-num">03</span><span class="chip-name">9世 尙智支</span><span class="chip-count">3人</span></a>
+<a class="chip" href="#branch-N44"><span class="chip-num">04</span><span class="chip-name">9世 尙義支</span><span class="chip-count">2人</span></a>
+<a class="chip" href="#branch-N263"><span class="chip-num">05</span><span class="chip-name">13世 文會支</span><span class="chip-count">12人</span></a>
+<a class="chip" href="#branch-N264"><span class="chip-num">06</span><span class="chip-name">13世 文煥支</span><span class="chip-count">12人</span></a>
+<a class="chip" href="#branch-N265"><span class="chip-num">07</span><span class="chip-name">13世 河支</span><span class="chip-count">61人</span></a>
+<a class="chip" href="#branch-N266"><span class="chip-num">08</span><span class="chip-name">13世 洋支</span><span class="chip-count">18人</span></a>
+<a class="chip" href="#branch-N267"><span class="chip-num">09</span><span class="chip-name">13世 潤支</span><span class="chip-count">51人</span></a>
+<a class="chip" href="#branch-N268"><span class="chip-num">10</span><span class="chip-name">13世 潽支</span><span class="chip-count">57人</span></a>
+<a class="chip" href="#branch-N105"><span class="chip-num">11</span><span class="chip-name">11世 崧支</span><span class="chip-count">2人</span></a>
+<a class="chip" href="#branch-N162"><span class="chip-num">12</span><span class="chip-name">12世 琨支</span><span class="chip-count">50人</span></a>
+<a class="chip" href="#branch-N163"><span class="chip-num">13</span><span class="chip-name">12世 鑑支</span><span class="chip-count">58人</span></a>
+<a class="chip" href="#branch-N107"><span class="chip-num">14</span><span class="chip-name">11世 華支</span><span class="chip-count">22人</span></a>
+<a class="chip" href="#branch-N64"><span class="chip-num">15</span><span class="chip-name">10世 方戊支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N65"><span class="chip-num">16</span><span class="chip-name">10世 玉支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N66"><span class="chip-num">17</span><span class="chip-name">10世 琮支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N22"><span class="chip-num">18</span><span class="chip-name">8世 明陽支</span><span class="chip-count">70人</span></a>
+<a class="chip" href="#branch-N23"><span class="chip-num">19</span><span class="chip-name">8世 朝陽支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N24"><span class="chip-num">20</span><span class="chip-name">8世 正陽支</span><span class="chip-count">2人</span></a>
+<a class="chip" href="#branch-N6"><span class="chip-num">21</span><span class="chip-name">7世 梓支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N7"><span class="chip-num">22</span><span class="chip-name">7世 楠支</span><span class="chip-count">2人</span></a>
+<a class="chip" href="#branch-N8"><span class="chip-num">23</span><span class="chip-name">7世 橋支</span><span class="chip-count">4人</span></a>
+<a class="chip" href="#branch-N9"><span class="chip-num">24</span><span class="chip-name">7世 材支</span><span class="chip-count">4人</span></a>
+<a class="chip" href="#branch-N10"><span class="chip-num">25</span><span class="chip-name">7世 林支</span><span class="chip-count">8人</span></a>
+<a class="chip" href="#branch-N26"><span class="chip-num">26</span><span class="chip-name">8世 時亨支</span><span class="chip-count">54人</span></a>
+<a class="chip" href="#branch-N27"><span class="chip-num">27</span><span class="chip-name">8世 時和支</span><span class="chip-count">6人</span></a>
+<a class="chip" href="#branch-N75"><span class="chip-num">28</span><span class="chip-name">10世 方庭支</span><span class="chip-count">16人</span></a>
+<a class="chip" href="#branch-N76"><span class="chip-num">29</span><span class="chip-name">10世 方廣支</span><span class="chip-count">47人</span></a>
+<a class="chip" href="#branch-N108"><span class="chip-num">30</span><span class="chip-name">11世 儒麟支</span><span class="chip-count">28人</span></a>
+<a class="chip" href="#branch-N109"><span class="chip-num">31</span><span class="chip-name">11世 兆麟支</span><span class="chip-count">1人</span></a>
+<a class="chip" href="#branch-N110"><span class="chip-num">32</span><span class="chip-name">11世 彥麟支</span><span class="chip-count">49人</span></a>
+<a class="chip" href="#branch-N167"><span class="chip-num">33</span><span class="chip-name">12世 宗正支</span><span class="chip-count">74人</span></a>
+<a class="chip" href="#branch-N168"><span class="chip-num">34</span><span class="chip-name">12世 宗端支</span><span class="chip-count">25人</span></a>
+<a class="chip" href="#branch-N169"><span class="chip-num">35</span><span class="chip-name">12世 宗謙支</span><span class="chip-count">13人</span></a>
+<a class="chip" href="#branch-N112"><span class="chip-num">36</span><span class="chip-name">11世 詠麟支</span><span class="chip-count">9人</span></a>
+<a class="chip" href="#branch-N113"><span class="chip-num">37</span><span class="chip-name">11世 雋麟支</span><span class="chip-count">20人</span></a>
+<a class="chip" href="#branch-N78"><span class="chip-num">38</span><span class="chip-name">10世 方賡支</span><span class="chip-count">53人</span></a>
+<a class="chip" href="#branch-N82"><span class="chip-num">39</span><span class="chip-name">10世 方奏支</span><span class="chip-count">90人</span></a>
+<a class="chip" href="#branch-N83"><span class="chip-num">40</span><span class="chip-name">10世 方調支</span><span class="chip-count">44人</span></a>
+<a class="chip" href="#branch-N84"><span class="chip-num">41</span><span class="chip-name">10世 方鼐支</span><span class="chip-count">32人</span></a>
+<a class="chip" href="#branch-N55"><span class="chip-num">42</span><span class="chip-name">9世 綬隆支</span><span class="chip-count">73人</span></a>
+<a class="chip" href="#branch-N29"><span class="chip-num">43</span><span class="chip-name">8世 時泰支</span><span class="chip-count">13人</span></a>
+<a class="chip" href="#branch-N12"><span class="chip-num">44</span><span class="chip-name">7世 檟支</span><span class="chip-count">2人</span></a>
+<a class="chip" href="#branch-N13"><span class="chip-num">45</span><span class="chip-name">7世 相支</span><span class="chip-count">15人</span></a>
+    </div>
+  </section>
+
+  <section class="branches">
+    <h2>分支详图</h2>
+    
+<section class="branch" id="branch-N1">
+  <div class="branch-head">
+    <span class="branch-badge">01</span>
+    <div class="branch-head-text">
+      <h3>6世 崑 支</h3>
+      <p class="breadcrumb">5世鉉</p>
+    </div>
+    <span class="branch-count">7 人 · 7 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N1["6｜崑（長子）"]
+  N4["7｜桐"]
+  N25["8｜安邦"]
+  N42["9｜夾鐘"]
+  N59["10｜良輔（長子）"]
+  N58["10｜良翰（次子）"]
+  N125["11｜嶽降"]
+  N1 --> N4
+  N4 --> N25
+  N25 --> N42
+  N42 --> N58
+  N42 --> N59
+  N58 --> N125
+  class N1,N4,N25 g1
+  class N42,N59,N58,N125 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N20">
+  <div class="branch-head">
+    <span class="branch-badge">02</span>
+    <div class="branch-head-text">
+      <h3>8世 志學 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N20["8｜志學（五子）"]
+  class N20 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N43">
+  <div class="branch-head">
+    <span class="branch-badge">03</span>
+    <div class="branch-head-text">
+      <h3>9世 尙智 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽</p>
+    </div>
+    <span class="branch-count">3 人 · 3 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N43["9｜尙智（三子）"]
+  N61["10｜璜（長子）"]
+  N60["10｜球（長子）"]
+  N43 --> N60
+  N43 --> N61
+  class N43,N61,N60 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N44">
+  <div class="branch-head">
+    <span class="branch-badge">04</span>
+    <div class="branch-head-text">
+      <h3>9世 尙義 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽</p>
+    </div>
+    <span class="branch-count">2 人 · 2 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N44["9｜尙義（次子）"]
+  N62["10｜珍"]
+  N44 --> N62
+  class N44,N62 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N263">
+  <div class="branch-head">
+    <span class="branch-badge">05</span>
+    <div class="branch-head-text">
+      <h3>13世 文會 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">12 人 · 12 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N263["13｜文會（次子）"]
+  N331["14｜琳"]
+  N424["15｜受祿"]
+  N426["16｜上德（次子）"]
+  N431["17｜協福（三子）"]
+  N430["17｜協富（次子）"]
+  N429["17｜協光（長子）"]
+  N432["18｜耀宗"]
+  N433["19｜志齡"]
+  N425["16｜上寬（長子）"]
+  N427["17｜協朝"]
+  N428["18｜耀宗（嗣子）"]
+  N263 --> N331
+  N331 --> N424
+  N424 --> N425
+  N424 --> N426
+  N426 --> N429
+  N426 --> N430
+  N426 --> N431
+  N429 --> N432
+  N432 --> N433
+  N425 --> N427
+  N427 --> N428
+  class N263,N331 g3
+  class N424,N426,N431,N430,N429,N425,N427 g4
+  class N432,N433,N428 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N264">
+  <div class="branch-head">
+    <span class="branch-badge">06</span>
+    <div class="branch-head-text">
+      <h3>13世 文煥 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">12 人 · 12 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N264["13｜文煥（長子）"]
+  N335["14｜瑾"]
+  N420["15｜正榮（三子）"]
+  N421["16｜順祥"]
+  N422["17｜協元"]
+  N423["18｜潤金"]
+  N418["15｜正坤（次子）"]
+  N419["16｜順祥（嗣子）"]
+  N414["15｜敬德（長子）"]
+  N415["16｜順禎"]
+  N416["17｜協興"]
+  N417["18｜榮寅"]
+  N264 --> N335
+  N335 --> N414
+  N335 --> N418
+  N335 --> N420
+  N420 --> N421
+  N421 --> N422
+  N422 --> N423
+  N418 --> N419
+  N414 --> N415
+  N415 --> N416
+  N416 --> N417
+  class N264,N335 g3
+  class N420,N421,N422,N418,N419,N414,N415,N416 g4
+  class N423,N417 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N265">
+  <div class="branch-head">
+    <span class="branch-badge">07</span>
+    <div class="branch-head-text">
+      <h3>13世 河 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">61 人 · 61 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N265["13｜河（五子）"]
+  N360["14｜瑤（次子）"]
+  N539["15｜永凝（三子）"]
+  N540["16｜上理"]
+  N541["17｜協軌"]
+  N542["18｜全茂"]
+  N522["15｜永壽（次子）"]
+  N524["16｜上建（次子）"]
+  N535["17｜協則"]
+  N536["18｜韞茂"]
+  N538["19｜三大（次子）"]
+  N537["19｜金海（長子）"]
+  N523["16｜上宣（長子）"]
+  N526["17｜協心（次子）"]
+  N531["18｜智"]
+  N533["19｜鶴興（次子）"]
+  N532["19｜鶴松（長子）"]
+  N534["20｜梅生"]
+  N525["17｜協善（長子）"]
+  N527["18｜仁"]
+  N528["19｜鶴齡"]
+  N530["20｜祖望（次子）"]
+  N529["20｜祖尚（長子）"]
+  N510["15｜永福（長子）"]
+  N513["16｜上年（三子）"]
+  N521["17｜協昌"]
+  N512["16｜上賢（次子）"]
+  N516["17｜協盛"]
+  N517["18｜禮（嗣子）"]
+  N520["19｜鶴元"]
+  N519["19｜鶴皋（次子）"]
+  N518["19｜鶴大（長子）"]
+  N511["16｜上卿（長子）"]
+  N514["17｜協蕃"]
+  N515["18｜禮（嗣子）"]
+  N359["14｜玕（長子）"]
+  N499["15｜永祿"]
+  N501["16｜上行（次子）"]
+  N504["17｜協信（三子）"]
+  N503["17｜協義（次子）"]
+  N509["18｜福茂"]
+  N502["17｜協禮（長子）"]
+  N505["18｜義"]
+  N506["19｜鶴鳴"]
+  N508["20｜渭倫（次子）"]
+  N507["20｜渭榮（長子）"]
+  N500["16｜上彥（長子）"]
+  N358["14｜俊齡（三子）"]
+  N549["15｜永亨（次子）"]
+  N554["16｜祥（次子）"]
+  N555["17｜元吉（嗣子）"]
+  N550["16｜禎（長子）"]
+  N551["17｜元吉"]
+  N552["18｜順茂"]
+  N553["19｜玉慶"]
+  N543["15｜永康（長子）"]
+  N544["16｜森"]
+  N545["17｜元達"]
+  N547["18｜溶茂（次子）"]
+  N546["18｜林茂（長子）"]
+  N548["19｜漢慶"]
+  N265 --> N358
+  N265 --> N359
+  N265 --> N360
+  N360 --> N510
+  N360 --> N522
+  N360 --> N539
+  N539 --> N540
+  N540 --> N541
+  N541 --> N542
+  N522 --> N523
+  N522 --> N524
+  N524 --> N535
+  N535 --> N536
+  N536 --> N537
+  N536 --> N538
+  N523 --> N525
+  N523 --> N526
+  N526 --> N531
+  N531 --> N532
+  N531 --> N533
+  N532 --> N534
+  N525 --> N527
+  N527 --> N528
+  N528 --> N529
+  N528 --> N530
+  N510 --> N511
+  N510 --> N512
+  N510 --> N513
+  N513 --> N521
+  N512 --> N516
+  N516 --> N517
+  N517 --> N518
+  N517 --> N519
+  N517 --> N520
+  N511 --> N514
+  N514 --> N515
+  N359 --> N499
+  N499 --> N500
+  N499 --> N501
+  N501 --> N502
+  N501 --> N503
+  N501 --> N504
+  N503 --> N509
+  N502 --> N505
+  N505 --> N506
+  N506 --> N507
+  N506 --> N508
+  N358 --> N543
+  N358 --> N549
+  N549 --> N550
+  N549 --> N554
+  N554 --> N555
+  N550 --> N551
+  N551 --> N552
+  N552 --> N553
+  N543 --> N544
+  N544 --> N545
+  N545 --> N546
+  N545 --> N547
+  N546 --> N548
+  class N265,N360,N359,N358 g3
+  class N539,N540,N541,N522,N524,N535,N523,N526,N525,N510,N513,N521,N512,N516,N511,N514,N499,N501,N504,N503,N502,N500,N549,N554,N555,N550,N551,N543,N544,N545 g4
+  class N542,N536,N538,N537,N531,N533,N532,N534,N527,N528,N530,N529,N517,N520,N519,N518,N515,N509,N505,N506,N508,N507,N552,N553,N547,N546,N548 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N266">
+  <div class="branch-head">
+    <span class="branch-badge">08</span>
+    <div class="branch-head-text">
+      <h3>13世 洋 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">18 人 · 18 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N266["13｜洋（三子）"]
+  N364["14｜璆（長子）"]
+  N434["15｜德載"]
+  N435["16｜上科（嗣子）"]
+  N363["14｜瑯（次子）"]
+  N443["15｜汝龍（五子）"]
+  N442["15｜直（四子）"]
+  N441["15｜正（三子）"]
+  N436["15｜光（長子）"]
+  N437["16｜上考"]
+  N440["17｜三郎（三子）"]
+  N439["17｜行大（次子）"]
+  N438["17｜協源（長子）"]
+  N362["14｜瑜（四子）"]
+  N446["15｜正凝"]
+  N361["14｜玟（三子）"]
+  N444["15｜明（嗣子）"]
+  N445["16｜上科"]
+  N266 --> N361
+  N266 --> N362
+  N266 --> N363
+  N266 --> N364
+  N364 --> N434
+  N434 --> N435
+  N363 --> N436
+  N363 --> N441
+  N363 --> N442
+  N363 --> N443
+  N436 --> N437
+  N437 --> N438
+  N437 --> N439
+  N437 --> N440
+  N362 --> N446
+  N361 --> N444
+  N444 --> N445
+  class N266,N364,N363,N362,N361 g3
+  class N434,N435,N443,N442,N441,N436,N437,N440,N439,N438,N446,N444,N445 g4
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N267">
+  <div class="branch-head">
+    <span class="branch-badge">09</span>
+    <div class="branch-head-text">
+      <h3>13世 潤 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">51 人 · 51 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N267["13｜潤（六子）"]
+  N368["14｜璋（次子）"]
+  N566["15｜恭"]
+  N569["16｜德安（三子）"]
+  N568["16｜玉安（次子）"]
+  N567["16｜順安（長子）"]
+  N570["17｜宏儒（嗣子）"]
+  N571["18｜泉福"]
+  N367["14｜琛（長子）"]
+  N556["15｜信（嗣子）"]
+  N558["16｜喜安（次子）"]
+  N563["17｜宏宜（次子）"]
+  N565["18｜泉福（嗣子）"]
+  N562["17｜宏朝（長子）"]
+  N564["18｜銀福"]
+  N557["16｜學安（長子）"]
+  N559["17｜宏志"]
+  N560["18｜金福"]
+  N561["19｜蓉齡"]
+  N366["14｜玳（三子）"]
+  N580["15｜敏（次子）"]
+  N583["16｜機（三子）"]
+  N585["17｜貴仁"]
+  N587["18｜根茂"]
+  N586["18｜馥茂"]
+  N582["16｜樞（次子）"]
+  N581["16｜模（長子）"]
+  N584["17｜貴仁（嗣子）"]
+  N572["15｜寬（長子）"]
+  N574["16｜傑（次子）"]
+  N576["17｜宏道"]
+  N579["18｜馥茂（三子）"]
+  N578["18｜銀福（嗣次子）"]
+  N577["18｜濟茂（長子）"]
+  N573["16｜榘（長子）"]
+  N575["17｜宏道（嗣子）"]
+  N365["14｜玢（四子）"]
+  N601["15｜儉（四子）"]
+  N595["15｜和（三子）"]
+  N597["16｜才（次子）"]
+  N596["16｜杰（長子）"]
+  N598["17｜宏寬"]
+  N599["18｜喜茂"]
+  N600["19｜林生"]
+  N589["15｜謙（次子）"]
+  N590["16｜棟"]
+  N591["17｜宏忍"]
+  N593["18｜喜成（次子）"]
+  N594["19｜杏生"]
+  N592["18｜秋成（長子）"]
+  N588["15｜蕙（長子）"]
+  N267 --> N365
+  N267 --> N366
+  N267 --> N367
+  N267 --> N368
+  N368 --> N566
+  N566 --> N567
+  N566 --> N568
+  N566 --> N569
+  N567 --> N570
+  N570 --> N571
+  N367 --> N556
+  N556 --> N557
+  N556 --> N558
+  N558 --> N562
+  N558 --> N563
+  N563 --> N565
+  N562 --> N564
+  N557 --> N559
+  N559 --> N560
+  N560 --> N561
+  N366 --> N572
+  N366 --> N580
+  N580 --> N581
+  N580 --> N582
+  N580 --> N583
+  N583 --> N585
+  N585 --> N586
+  N585 --> N587
+  N581 --> N584
+  N572 --> N573
+  N572 --> N574
+  N574 --> N576
+  N576 --> N577
+  N576 --> N578
+  N576 --> N579
+  N573 --> N575
+  N365 --> N588
+  N365 --> N589
+  N365 --> N595
+  N365 --> N601
+  N595 --> N596
+  N595 --> N597
+  N596 --> N598
+  N598 --> N599
+  N599 --> N600
+  N589 --> N590
+  N590 --> N591
+  N591 --> N592
+  N591 --> N593
+  N593 --> N594
+  class N267,N368,N367,N366,N365 g3
+  class N566,N569,N568,N567,N570,N556,N558,N563,N562,N557,N559,N580,N583,N585,N582,N581,N584,N572,N574,N576,N573,N575,N601,N595,N597,N596,N598,N589,N590,N591,N588 g4
+  class N571,N565,N564,N560,N561,N587,N586,N579,N578,N577,N599,N600,N593,N594,N592 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N268">
+  <div class="branch-head">
+    <span class="branch-badge">10</span>
+    <div class="branch-head-text">
+      <h3>13世 潽 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世岱 › 12世錦</p>
+    </div>
+    <span class="branch-count">57 人 · 57 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N268["13｜潽（四子）"]
+  N372["14｜佛齡（三子）"]
+  N371["14｜仁育（長子）"]
+  N470["15｜可晟（三子）"]
+  N461["15｜可立（次子）"]
+  N466["16｜志順（五子）"]
+  N465["16｜志隆（四子）"]
+  N464["16｜志敘（三子）"]
+  N463["16｜志二（次子）"]
+  N462["16｜志陶（長子）"]
+  N467["17｜協瑞"]
+  N468["18｜柏茂（長子）"]
+  N469["19｜聽大（次子）"]
+  N447["15｜可興（長子）"]
+  N450["16｜志慧（三子）"]
+  N457["17｜協和"]
+  N458["18｜珊茂"]
+  N460["19｜連生（次子）"]
+  N459["19｜福生（長子）"]
+  N449["16｜志誠（次子）"]
+  N454["17｜協榮（次子）"]
+  N455["18｜森茂"]
+  N456["19｜喜根"]
+  N453["17｜協茂（長子）"]
+  N448["16｜志彭（長子）"]
+  N451["17｜協中"]
+  N452["18｜俊茂（嗣子）"]
+  N370["14｜仁聲（次子）"]
+  N476["15｜葵秋（次子）"]
+  N477["16｜志明（嗣子）"]
+  N471["15｜杏春（長子）"]
+  N473["16｜志清（次子）"]
+  N474["17｜協珍"]
+  N475["18｜森茂（嗣子）"]
+  N472["16｜聚盈（長子）"]
+  N369["14｜仁璐（四子）"]
+  N493["15｜企良（次子）"]
+  N494["16｜志常"]
+  N495["17｜協泰"]
+  N497["18｜稼茂（次子）"]
+  N496["18｜桂茂（長子）"]
+  N498["19｜喜大"]
+  N478["15｜企賢（長子）"]
+  N480["16｜志道（次子）"]
+  N491["17｜協舒（次子）"]
+  N492["18｜柏茂（嗣子）"]
+  N484["17｜協寬（長子）"]
+  N490["18｜德茂（次子）"]
+  N485["18｜俊茂（長子）"]
+  N489["19｜聽生（四子）"]
+  N488["19｜和尚（三子）"]
+  N487["19｜陸生（次子）"]
+  N486["19｜聽榮（長子）"]
+  N479["16｜志高（長子）"]
+  N481["17｜協裕"]
+  N482["18｜元茂"]
+  N483["19｜鶴雲"]
+  N268 --> N369
+  N268 --> N370
+  N268 --> N371
+  N268 --> N372
+  N371 --> N447
+  N371 --> N461
+  N371 --> N470
+  N461 --> N462
+  N461 --> N463
+  N461 --> N464
+  N461 --> N465
+  N461 --> N466
+  N462 --> N467
+  N467 --> N468
+  N468 --> N469
+  N447 --> N448
+  N447 --> N449
+  N447 --> N450
+  N450 --> N457
+  N457 --> N458
+  N458 --> N459
+  N458 --> N460
+  N449 --> N453
+  N449 --> N454
+  N454 --> N455
+  N455 --> N456
+  N448 --> N451
+  N451 --> N452
+  N370 --> N471
+  N370 --> N476
+  N476 --> N477
+  N471 --> N472
+  N471 --> N473
+  N473 --> N474
+  N474 --> N475
+  N369 --> N478
+  N369 --> N493
+  N493 --> N494
+  N494 --> N495
+  N495 --> N496
+  N495 --> N497
+  N496 --> N498
+  N478 --> N479
+  N478 --> N480
+  N480 --> N484
+  N480 --> N491
+  N491 --> N492
+  N484 --> N485
+  N484 --> N490
+  N485 --> N486
+  N485 --> N487
+  N485 --> N488
+  N485 --> N489
+  N479 --> N481
+  N481 --> N482
+  N482 --> N483
+  class N268,N372,N371,N370,N369 g3
+  class N470,N461,N466,N465,N464,N463,N462,N467,N447,N450,N457,N449,N454,N453,N448,N451,N476,N477,N471,N473,N474,N472,N493,N494,N495,N478,N480,N491,N484,N479,N481 g4
+  class N468,N469,N458,N460,N459,N455,N456,N452,N475,N497,N496,N498,N492,N490,N485,N489,N488,N487,N486,N482,N483 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N105">
+  <div class="branch-head">
+    <span class="branch-badge">11</span>
+    <div class="branch-head-text">
+      <h3>11世 崧 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠</p>
+    </div>
+    <span class="branch-count">2 人 · 2 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N105["11｜崧（長子）"]
+  N157["12｜錞"]
+  N105 --> N157
+  class N105 g2
+  class N157 g3
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N162">
+  <div class="branch-head">
+    <span class="branch-badge">12</span>
+    <div class="branch-head-text">
+      <h3>12世 琨 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世恆</p>
+    </div>
+    <span class="branch-count">50 人 · 50 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N162["12｜琨（長子）"]
+  N251["13｜聯元（長子）"]
+  N395["14｜月藻（三子）"]
+  N643["15｜善慶（三子）"]
+  N644["16｜渭經"]
+  N645["17｜聽洪"]
+  N646["18｜金成"]
+  N641["15｜有慶（次子）"]
+  N642["16｜培基"]
+  N637["15｜餘慶（長子）"]
+  N638["16｜渭濱"]
+  N639["17｜聽洪（嗣子）"]
+  N640["18｜盛成"]
+  N394["14｜岐音（長子）"]
+  N610["15｜遇奎（三子）"]
+  N612["16｜繼元（次子）"]
+  N611["16｜繼方（長子）"]
+  N613["17｜吉雲"]
+  N607["15｜遇龍（次子）"]
+  N608["16｜遺貞"]
+  N609["17｜吉祥"]
+  N602["15｜遇侯（長子）"]
+  N604["16｜繼立（次子）"]
+  N606["17｜吉全"]
+  N603["16｜繼壽（長子）"]
+  N605["17｜吉亨"]
+  N393["14｜歷（次子）"]
+  N633["15｜壽芝（五子）"]
+  N634["16｜如林"]
+  N635["17｜金敘"]
+  N636["18｜惟培"]
+  N630["15｜壽松（四子）"]
+  N632["16｜渭高（次子）"]
+  N631["16｜渭興（長子）"]
+  N626["15｜壽岐（三子）"]
+  N629["16｜渭安（三子）"]
+  N628["16｜渭因（次子）"]
+  N627["16｜渭洲（長子）"]
+  N620["15｜壽元（次子）"]
+  N621["16｜如桓"]
+  N623["17｜金齡（次子）"]
+  N622["17｜金相（長子）"]
+  N624["18｜惟坤"]
+  N625["19｜盛林"]
+  N614["15｜壽南（長子）"]
+  N616["16｜履吉（次子）"]
+  N615["16｜履祥（長子）"]
+  N617["17｜模楷"]
+  N618["18｜書德"]
+  N619["19｜盛林（嗣子）"]
+  N162 --> N251
+  N251 --> N393
+  N251 --> N394
+  N251 --> N395
+  N395 --> N637
+  N395 --> N641
+  N395 --> N643
+  N643 --> N644
+  N644 --> N645
+  N645 --> N646
+  N641 --> N642
+  N637 --> N638
+  N638 --> N639
+  N639 --> N640
+  N394 --> N602
+  N394 --> N607
+  N394 --> N610
+  N610 --> N611
+  N610 --> N612
+  N611 --> N613
+  N607 --> N608
+  N608 --> N609
+  N602 --> N603
+  N602 --> N604
+  N604 --> N606
+  N603 --> N605
+  N393 --> N614
+  N393 --> N620
+  N393 --> N626
+  N393 --> N630
+  N393 --> N633
+  N633 --> N634
+  N634 --> N635
+  N635 --> N636
+  N630 --> N631
+  N630 --> N632
+  N626 --> N627
+  N626 --> N628
+  N626 --> N629
+  N620 --> N621
+  N621 --> N622
+  N621 --> N623
+  N622 --> N624
+  N624 --> N625
+  N614 --> N615
+  N614 --> N616
+  N615 --> N617
+  N617 --> N618
+  N618 --> N619
+  class N162,N251,N395,N394,N393 g3
+  class N643,N644,N645,N641,N642,N637,N638,N639,N610,N612,N611,N613,N607,N608,N609,N602,N604,N606,N603,N605,N633,N634,N635,N630,N632,N631,N626,N629,N628,N627,N620,N621,N623,N622,N614,N616,N615,N617 g4
+  class N646,N640,N636,N624,N625,N618,N619 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N163">
+  <div class="branch-head">
+    <span class="branch-badge">13</span>
+    <div class="branch-head-text">
+      <h3>12世 鑑 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠 › 11世恆</p>
+    </div>
+    <span class="branch-count">58 人 · 58 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N163["12｜鑑（次子）"]
+  N272["13｜西晠（三子）"]
+  N407["14｜福三（三子）"]
+  N406["14｜惇臨（長子）"]
+  N675["15｜坤元（次子）"]
+  N672["15｜坤成（長子）"]
+  N673["16｜產榮（嗣子）"]
+  N674["17｜文鰲（嗣子）"]
+  N405["14｜惇三（次子）"]
+  N271["13｜東作（長子）"]
+  N357["14｜貞（四子）"]
+  N662["15｜邦俊"]
+  N663["16｜春華（長子）"]
+  N665["17｜椿鰲（次子）"]
+  N664["17｜文鰲（長子）"]
+  N356["14｜利（三子）"]
+  N658["15｜壽龍"]
+  N659["16｜榮增"]
+  N660["17｜海麟"]
+  N661["18｜福生"]
+  N355["14｜元（長子）"]
+  N647["15｜邦俊（嗣子）"]
+  N648["16｜春華（長子）"]
+  N649["17｜海鰲"]
+  N354["14｜亨（次子）"]
+  N654["15｜壽福（次子）"]
+  N655["16｜保盈"]
+  N656["17｜金鰲（嗣子）"]
+  N657["18｜渭生"]
+  N650["15｜鳳起（長子）"]
+  N651["16｜章盈"]
+  N652["17｜海朝"]
+  N653["18｜福生（嗣子）"]
+  N270["13｜南訛（次子）"]
+  N297["14｜耀先（三子）"]
+  N668["15｜坤行（次子）"]
+  N669["16｜順庚"]
+  N670["17｜金鰲"]
+  N671["18｜譜生"]
+  N666["15｜荇交（長子）"]
+  N667["16｜順年"]
+  N269["13｜北伏（四子）"]
+  N296["14｜科元（次子）"]
+  N680["15｜壽德"]
+  N681["16｜榮富（嗣子）"]
+  N682["17｜金海（次子）"]
+  N295["14｜秋元（長子）"]
+  N676["15｜壽盈（嗣子）"]
+  N677["16｜炳長（長子）"]
+  N678["17｜鴻鰲（嗣子）"]
+  N679["18｜桂根"]
+  N294["14｜祥元（四子）"]
+  N293["14｜掄元（三子）"]
+  N683["15｜壽盈"]
+  N686["16｜榮富（三子）"]
+  N687["17｜林海（三子）"]
+  N684["16｜炳玉（次子）"]
+  N685["17｜金海（嗣子）"]
+  N163 --> N269
+  N163 --> N270
+  N163 --> N271
+  N163 --> N272
+  N272 --> N405
+  N272 --> N406
+  N272 --> N407
+  N406 --> N672
+  N406 --> N675
+  N672 --> N673
+  N673 --> N674
+  N271 --> N354
+  N271 --> N355
+  N271 --> N356
+  N271 --> N357
+  N357 --> N662
+  N662 --> N663
+  N663 --> N664
+  N663 --> N665
+  N356 --> N658
+  N658 --> N659
+  N659 --> N660
+  N660 --> N661
+  N355 --> N647
+  N647 --> N648
+  N648 --> N649
+  N354 --> N650
+  N354 --> N654
+  N654 --> N655
+  N655 --> N656
+  N656 --> N657
+  N650 --> N651
+  N651 --> N652
+  N652 --> N653
+  N270 --> N297
+  N297 --> N666
+  N297 --> N668
+  N668 --> N669
+  N669 --> N670
+  N670 --> N671
+  N666 --> N667
+  N269 --> N293
+  N269 --> N294
+  N269 --> N295
+  N269 --> N296
+  N296 --> N680
+  N680 --> N681
+  N681 --> N682
+  N295 --> N676
+  N676 --> N677
+  N677 --> N678
+  N678 --> N679
+  N293 --> N683
+  N683 --> N684
+  N683 --> N686
+  N686 --> N687
+  N684 --> N685
+  class N163,N272,N407,N406,N405,N271,N357,N356,N355,N354,N270,N297,N269,N296,N295,N294,N293 g3
+  class N675,N672,N673,N674,N662,N663,N665,N664,N658,N659,N660,N647,N648,N649,N654,N655,N656,N650,N651,N652,N668,N669,N670,N666,N667,N680,N681,N682,N676,N677,N678,N683,N686,N687,N684,N685 g4
+  class N661,N657,N653,N671,N679 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N107">
+  <div class="branch-head">
+    <span class="branch-badge">14</span>
+    <div class="branch-head-text">
+      <h3>11世 華 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁 › 10世方惠</p>
+    </div>
+    <span class="branch-count">22 人 · 22 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N107["11｜華（四子）"]
+  N182["12｜鋘（長子）"]
+  N262["13｜珂鳴"]
+  N376["14｜邦茂（長子）"]
+  N688["15｜福魁"]
+  N689["16｜展豐"]
+  N375["14｜邦興（三子）"]
+  N698["15｜壽海（四子）"]
+  N699["16｜震來"]
+  N696["15｜壽滄（嗣子）"]
+  N697["16｜震乙"]
+  N694["15｜壽熙（長子）"]
+  N695["16｜震來（嗣子）"]
+  N374["14｜邦祚（四子）"]
+  N700["15｜壽昌（嗣子）"]
+  N701["16｜震亨"]
+  N373["14｜邦甸（次子）"]
+  N690["15｜南山"]
+  N691["16｜裕豐"]
+  N692["17｜洪大"]
+  N693["18｜炳茂"]
+  N181["12｜銘（嗣子）"]
+  N107 --> N181
+  N107 --> N182
+  N182 --> N262
+  N262 --> N373
+  N262 --> N374
+  N262 --> N375
+  N262 --> N376
+  N376 --> N688
+  N688 --> N689
+  N375 --> N694
+  N375 --> N696
+  N375 --> N698
+  N698 --> N699
+  N696 --> N697
+  N694 --> N695
+  N374 --> N700
+  N700 --> N701
+  N373 --> N690
+  N690 --> N691
+  N691 --> N692
+  N692 --> N693
+  class N107 g2
+  class N182,N262,N376,N375,N374,N373,N181 g3
+  class N688,N689,N698,N699,N696,N697,N694,N695,N700,N701,N690,N691,N692 g4
+  class N693 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N64">
+  <div class="branch-head">
+    <span class="branch-badge">15</span>
+    <div class="branch-head-text">
+      <h3>10世 方戊 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N64["10｜方戊（長子）"]
+  class N64 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N65">
+  <div class="branch-head">
+    <span class="branch-badge">16</span>
+    <div class="branch-head-text">
+      <h3>10世 玉 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N65["10｜玉（三子）"]
+  class N65 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N66">
+  <div class="branch-head">
+    <span class="branch-badge">17</span>
+    <div class="branch-head-text">
+      <h3>10世 琮 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢 › 8世應陽 › 9世尚仁</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N66["10｜琮（次子）"]
+  class N66 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N22">
+  <div class="branch-head">
+    <span class="branch-badge">18</span>
+    <div class="branch-head-text">
+      <h3>8世 明陽 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢</p>
+    </div>
+    <span class="branch-count">70 人 · 70 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N22["8｜明陽（四子）"]
+  N48["9｜聞詩（長子）"]
+  N89["10｜雲龍（長子）"]
+  N88["10｜雲鳳（次子）"]
+  N47["9｜聞禮（次子）"]
+  N87["10｜雲鶴"]
+  N128["11｜道佑（長子）"]
+  N127["11｜俊伯（次子）"]
+  N139["12｜君茂（次子）"]
+  N193["13｜文魁（次子）"]
+  N341["14｜順川（次子）"]
+  N737["15｜寶大（三子）"]
+  N738["16｜傳興"]
+  N736["15｜鳳德（長子）"]
+  N340["14｜大川（長子）"]
+  N734["15｜安大（嗣子）"]
+  N735["16｜喜興"]
+  N339["14｜三川（三子）"]
+  N192["13｜文正（四子）"]
+  N334["14｜聖二（次子）"]
+  N333["14｜朝祖（長子）"]
+  N332["14｜朝元（三子）"]
+  N742["15｜受南"]
+  N191["13｜文德（長子）"]
+  N330["14｜子聽（次子）"]
+  N726["15｜福芝"]
+  N728["16｜逢興（次子）"]
+  N732["17｜松泉"]
+  N733["18｜鏞法"]
+  N727["16｜隆興（長子）"]
+  N729["17｜林全"]
+  N731["18｜銀法（次子）"]
+  N730["18｜煜法（長子）"]
+  N329["14｜子淩（長子）"]
+  N724["15｜書二（次子）"]
+  N725["16｜德興"]
+  N721["15｜書大（長子）"]
+  N722["16｜玉興"]
+  N723["17｜紀元"]
+  N190["13｜文令（三子）"]
+  N328["14｜順康（次子）"]
+  N739["15｜鳳朝"]
+  N740["16｜國興"]
+  N327["14｜順凝（次子）"]
+  N741["15｜慶書"]
+  N138["12｜君祥（長子）"]
+  N189["13｜文輝"]
+  N338["14｜縉元（三子）"]
+  N718["15｜戌大"]
+  N719["16｜宗大"]
+  N720["17｜紀愷"]
+  N337["14｜瑞元（次子）"]
+  N715["15｜德二（次子）"]
+  N716["16｜川興"]
+  N710["15｜德大（長子）"]
+  N711["16｜川興（嗣子）"]
+  N712["17｜紀達"]
+  N713["18｜全寶"]
+  N717["19｜鶴銘"]
+  N714["19｜鴻銘"]
+  N336["14｜書林（長子）"]
+  N707["15｜元如（次子）"]
+  N708["16｜仁興"]
+  N709["17｜紀增"]
+  N702["15｜方如（長子）"]
+  N703["16｜正興"]
+  N704["17｜紀愷（嗣子）"]
+  N705["18｜亮保"]
+  N706["19｜熊銘"]
+  N46["9｜聞樂（三子）"]
+  N22 --> N46
+  N22 --> N47
+  N22 --> N48
+  N48 --> N88
+  N48 --> N89
+  N47 --> N87
+  N87 --> N127
+  N87 --> N128
+  N127 --> N138
+  N127 --> N139
+  N139 --> N190
+  N139 --> N191
+  N139 --> N192
+  N139 --> N193
+  N193 --> N339
+  N193 --> N340
+  N193 --> N341
+  N341 --> N736
+  N341 --> N737
+  N737 --> N738
+  N340 --> N734
+  N734 --> N735
+  N192 --> N332
+  N192 --> N333
+  N192 --> N334
+  N332 --> N742
+  N191 --> N329
+  N191 --> N330
+  N330 --> N726
+  N726 --> N727
+  N726 --> N728
+  N728 --> N732
+  N732 --> N733
+  N727 --> N729
+  N729 --> N730
+  N729 --> N731
+  N329 --> N721
+  N329 --> N724
+  N724 --> N725
+  N721 --> N722
+  N722 --> N723
+  N190 --> N327
+  N190 --> N328
+  N328 --> N739
+  N739 --> N740
+  N327 --> N741
+  N138 --> N189
+  N189 --> N336
+  N189 --> N337
+  N189 --> N338
+  N338 --> N718
+  N718 --> N719
+  N719 --> N720
+  N337 --> N710
+  N337 --> N715
+  N715 --> N716
+  N710 --> N711
+  N711 --> N712
+  N712 --> N713
+  N713 --> N714
+  N713 --> N717
+  N336 --> N702
+  N336 --> N707
+  N707 --> N708
+  N708 --> N709
+  N702 --> N703
+  N703 --> N704
+  N704 --> N705
+  N705 --> N706
+  class N22 g1
+  class N48,N89,N88,N47,N87,N128,N127,N46 g2
+  class N139,N193,N341,N340,N339,N192,N334,N333,N332,N191,N330,N329,N190,N328,N327,N138,N189,N338,N337,N336 g3
+  class N737,N738,N736,N734,N735,N742,N726,N728,N732,N727,N729,N724,N725,N721,N722,N723,N739,N740,N741,N718,N719,N720,N715,N716,N710,N711,N712,N707,N708,N709,N702,N703,N704 g4
+  class N733,N731,N730,N713,N717,N714,N705,N706 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N23">
+  <div class="branch-head">
+    <span class="branch-badge">19</span>
+    <div class="branch-head-text">
+      <h3>8世 朝陽 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N23["8｜朝陽（次子）"]
+  class N23 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N24">
+  <div class="branch-head">
+    <span class="branch-badge">20</span>
+    <div class="branch-head-text">
+      <h3>8世 正陽 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙 › 7世栢</p>
+    </div>
+    <span class="branch-count">2 人 · 2 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N24["8｜正陽（長子）"]
+  N57["9｜林鐘（長子）"]
+  N24 --> N57
+  class N24 g1
+  class N57 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N6">
+  <div class="branch-head">
+    <span class="branch-badge">21</span>
+    <div class="branch-head-text">
+      <h3>7世 梓 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N6["7｜梓（四子）"]
+  class N6 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N7">
+  <div class="branch-head">
+    <span class="branch-badge">22</span>
+    <div class="branch-head-text">
+      <h3>7世 楠 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙</p>
+    </div>
+    <span class="branch-count">2 人 · 2 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N7["7｜楠（長子）"]
+  N30["8｜炳（長子）"]
+  N7 --> N30
+  class N7,N30 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N8">
+  <div class="branch-head">
+    <span class="branch-badge">23</span>
+    <div class="branch-head-text">
+      <h3>7世 橋 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世崙</p>
+    </div>
+    <span class="branch-count">4 人 · 4 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N8["7｜橋（三子）"]
+  N33["8｜志義（三子）"]
+  N32["8｜志孟（長子）"]
+  N31["8｜志仁（長子）"]
+  N8 --> N31
+  N8 --> N32
+  N8 --> N33
+  class N8,N33,N32,N31 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N9">
+  <div class="branch-head">
+    <span class="branch-badge">24</span>
+    <div class="branch-head-text">
+      <h3>7世 材 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂</p>
+    </div>
+    <span class="branch-count">4 人 · 4 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N9["7｜材（四子）"]
+  N15["8｜士明"]
+  N14["8｜士城"]
+  N40["9｜希閔"]
+  N9 --> N14
+  N9 --> N15
+  N14 --> N40
+  class N9,N15,N14 g1
+  class N40 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N10">
+  <div class="branch-head">
+    <span class="branch-badge">25</span>
+    <div class="branch-head-text">
+      <h3>7世 林 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂</p>
+    </div>
+    <span class="branch-count">8 人 · 8 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N10["7｜林（五子）"]
+  N19["8｜士毅"]
+  N18["8｜士宏"]
+  N41["9｜希望"]
+  N71["10｜克勤"]
+  N70["10｜元聲"]
+  N17["8｜士奇"]
+  N16["8｜士凝"]
+  N10 --> N16
+  N10 --> N17
+  N10 --> N18
+  N10 --> N19
+  N18 --> N41
+  N41 --> N70
+  N41 --> N71
+  class N10,N19,N18,N17,N16 g1
+  class N41,N71,N70 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N26">
+  <div class="branch-head">
+    <span class="branch-badge">26</span>
+    <div class="branch-head-text">
+      <h3>8世 時亨 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁</p>
+    </div>
+    <span class="branch-count">54 人 · 54 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N26["8｜時亨（三子）"]
+  N51["9｜希禹（長子）"]
+  N72["10｜方貞（長子）"]
+  N115["11｜至全（長子）"]
+  N178["12｜文行（長子）"]
+  N235["13｜節孫（長子）"]
+  N383["14｜喜瑞"]
+  N777["15｜正年（嗣子）"]
+  N778["16｜敘成"]
+  N779["17｜龍福"]
+  N780["18｜永發"]
+  N782["19｜學中（次子）"]
+  N781["19｜學行（長子）"]
+  N234["13｜忠連（長子）"]
+  N323["14｜漢森（長子）"]
+  N752["15｜五大（三子）"]
+  N753["16｜敘寶"]
+  N755["17｜龍宜（次子）"]
+  N754["17｜龍田（長子）"]
+  N748["15｜閏大（次子）"]
+  N749["16｜敘榮"]
+  N750["17｜龍慶"]
+  N751["18｜永寶"]
+  N743["15｜繼大（長子）"]
+  N744["16｜聽喜"]
+  N746["17｜龍興（次子）"]
+  N747["18｜盛大"]
+  N745["17｜龍書（長子）"]
+  N322["14｜漢林（次子）"]
+  N756["15｜正源"]
+  N759["16｜敘孝（三子）"]
+  N758["16｜敘仁（次子）"]
+  N760["17｜龍見"]
+  N757["16｜敘法（長子）"]
+  N233["13｜孝孫（長子）"]
+  N313["14｜廷奎"]
+  N776["15｜繼寶（五子）"]
+  N774["15｜正聚（四子）"]
+  N775["16｜敘生"]
+  N769["15｜正泰（三子）"]
+  N770["16｜敘富"]
+  N771["17｜龍德"]
+  N772["18｜永興"]
+  N773["19｜錦升"]
+  N761["15｜正隆（長子）"]
+  N762["16｜敘華"]
+  N764["17｜龍元（次子）"]
+  N767["18｜永發（嗣子）"]
+  N768["19｜學信"]
+  N763["17｜龍雲（長子）"]
+  N765["18｜永根"]
+  N766["19｜學文"]
+  N50["9｜希武（三子）"]
+  N49["9｜希文（次子）"]
+  N26 --> N49
+  N26 --> N50
+  N26 --> N51
+  N51 --> N72
+  N72 --> N115
+  N115 --> N178
+  N178 --> N233
+  N178 --> N234
+  N178 --> N235
+  N235 --> N383
+  N383 --> N777
+  N777 --> N778
+  N778 --> N779
+  N779 --> N780
+  N780 --> N781
+  N780 --> N782
+  N234 --> N322
+  N234 --> N323
+  N323 --> N743
+  N323 --> N748
+  N323 --> N752
+  N752 --> N753
+  N753 --> N754
+  N753 --> N755
+  N748 --> N749
+  N749 --> N750
+  N750 --> N751
+  N743 --> N744
+  N744 --> N745
+  N744 --> N746
+  N746 --> N747
+  N322 --> N756
+  N756 --> N757
+  N756 --> N758
+  N756 --> N759
+  N758 --> N760
+  N233 --> N313
+  N313 --> N761
+  N313 --> N769
+  N313 --> N774
+  N313 --> N776
+  N774 --> N775
+  N769 --> N770
+  N770 --> N771
+  N771 --> N772
+  N772 --> N773
+  N761 --> N762
+  N762 --> N763
+  N762 --> N764
+  N764 --> N767
+  N767 --> N768
+  N763 --> N765
+  N765 --> N766
+  class N26 g1
+  class N51,N72,N115,N50,N49 g2
+  class N178,N235,N383,N234,N323,N322,N233,N313 g3
+  class N777,N778,N779,N752,N753,N755,N754,N748,N749,N750,N743,N744,N746,N745,N756,N759,N758,N760,N757,N776,N774,N775,N769,N770,N771,N761,N762,N764,N763 g4
+  class N780,N782,N781,N751,N747,N772,N773,N767,N768,N765,N766 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N27">
+  <div class="branch-head">
+    <span class="branch-badge">27</span>
+    <div class="branch-head-text">
+      <h3>8世 時和 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁</p>
+    </div>
+    <span class="branch-count">6 人 · 6 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N27["8｜時和（次子）"]
+  N52["9｜新周"]
+  N81["10｜敦復（長子）"]
+  N80["10｜來復（三子）"]
+  N79["10｜中復（次子）"]
+  N95["11｜象乾"]
+  N27 --> N52
+  N52 --> N79
+  N52 --> N80
+  N52 --> N81
+  N79 --> N95
+  class N27 g1
+  class N52,N81,N80,N79,N95 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N75">
+  <div class="branch-head">
+    <span class="branch-badge">28</span>
+    <div class="branch-head-text">
+      <h3>10世 方庭 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆</p>
+    </div>
+    <span class="branch-count">16 人 · 16 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N75["10｜方庭（長子）"]
+  N102["11｜萃麟"]
+  N183["12｜師禹"]
+  N225["13｜裕昆（長子）"]
+  N402["14｜舜聰（長子）"]
+  N783["15｜慎修"]
+  N785["16｜肇紀（次子）"]
+  N784["16｜肇清（長子）"]
+  N786["17｜惟熊"]
+  N789["18｜永和（三子）"]
+  N788["18｜永福（次子）"]
+  N787["18｜永德（長子）"]
+  N224["13｜裕倫（次子）"]
+  N401["14｜舜明（次子）"]
+  N790["15｜慎修（嗣子）"]
+  N791["16｜肇和（嗣子）"]
+  N75 --> N102
+  N102 --> N183
+  N183 --> N224
+  N183 --> N225
+  N225 --> N402
+  N402 --> N783
+  N783 --> N784
+  N783 --> N785
+  N784 --> N786
+  N786 --> N787
+  N786 --> N788
+  N786 --> N789
+  N224 --> N401
+  N401 --> N790
+  N790 --> N791
+  class N75,N102 g2
+  class N183,N225,N402,N224,N401 g3
+  class N783,N785,N784,N786,N790,N791 g4
+  class N789,N788,N787 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N76">
+  <div class="branch-head">
+    <span class="branch-badge">29</span>
+    <div class="branch-head-text">
+      <h3>10世 方廣 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆</p>
+    </div>
+    <span class="branch-count">47 人 · 47 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N76["10｜方廣（三子）"]
+  N103["11｜天麟"]
+  N155["12｜師舜（長子）"]
+  N228["13｜裕輝（次子）"]
+  N404["14｜正龍（長子）"]
+  N813["15｜雙喜"]
+  N815["16｜如楹（次子）"]
+  N814["16｜如崗（長子）"]
+  N816["17｜書發"]
+  N817["18｜永嘉"]
+  N403["14｜正全（次子）"]
+  N822["15｜得喜（次子）"]
+  N823["16｜如楨"]
+  N824["17｜明發"]
+  N826["18｜永林（次子）"]
+  N827["19｜紹疇"]
+  N825["18｜永和（長子）"]
+  N818["15｜兆喜（長子）"]
+  N819["16｜汝楠"]
+  N820["17｜鳳興（嗣子）"]
+  N821["18｜永壽"]
+  N227["13｜裕光（長子）"]
+  N154["12｜師章（三子）"]
+  N153["12｜師孔（次子）"]
+  N214["13｜元臣"]
+  N282["14｜慎壽（次子）"]
+  N845["15｜存仁（次子）"]
+  N836["15｜存宇（長子）"]
+  N838["16｜懷孝（次子）"]
+  N842["17｜順發（次子）"]
+  N844["18｜永清"]
+  N841["17｜榮發（長子）"]
+  N843["18｜永康"]
+  N837["16｜懷忠（長子）"]
+  N839["17｜興發"]
+  N840["18｜永盛"]
+  N281["14｜慎初（長子）"]
+  N828["15｜存義"]
+  N830["16｜懷安（次子）"]
+  N834["17｜瑞興"]
+  N835["18｜永壽（嗣子）"]
+  N829["16｜懷邦（長子）"]
+  N831["17｜鳳興"]
+  N833["18｜永昌（次子）"]
+  N832["18｜永福（長子）"]
+  N280["14｜慎先（三子）"]
+  N846["15｜存行（長子）"]
+  N76 --> N103
+  N103 --> N153
+  N103 --> N154
+  N103 --> N155
+  N155 --> N227
+  N155 --> N228
+  N228 --> N403
+  N228 --> N404
+  N404 --> N813
+  N813 --> N814
+  N813 --> N815
+  N814 --> N816
+  N816 --> N817
+  N403 --> N818
+  N403 --> N822
+  N822 --> N823
+  N823 --> N824
+  N824 --> N825
+  N824 --> N826
+  N826 --> N827
+  N818 --> N819
+  N819 --> N820
+  N820 --> N821
+  N153 --> N214
+  N214 --> N280
+  N214 --> N281
+  N214 --> N282
+  N282 --> N836
+  N282 --> N845
+  N836 --> N837
+  N836 --> N838
+  N838 --> N841
+  N838 --> N842
+  N842 --> N844
+  N841 --> N843
+  N837 --> N839
+  N839 --> N840
+  N281 --> N828
+  N828 --> N829
+  N828 --> N830
+  N830 --> N834
+  N834 --> N835
+  N829 --> N831
+  N831 --> N832
+  N831 --> N833
+  N280 --> N846
+  class N76,N103 g2
+  class N155,N228,N404,N403,N227,N154,N153,N214,N282,N281,N280 g3
+  class N813,N815,N814,N816,N822,N823,N824,N818,N819,N820,N845,N836,N838,N842,N841,N837,N839,N828,N830,N834,N829,N831,N846 g4
+  class N817,N826,N827,N825,N821,N844,N843,N840,N835,N833,N832 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N108">
+  <div class="branch-head">
+    <span class="branch-badge">30</span>
+    <div class="branch-head-text">
+      <h3>11世 儒麟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶</p>
+    </div>
+    <span class="branch-count">28 人 · 28 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N108["11｜儒麟（長子）"]
+  N144["12｜永行（五子）"]
+  N243["13｜福元"]
+  N382["14｜文政"]
+  N854["15｜慶福"]
+  N143["12｜永祥（長子）"]
+  N242["13｜羅"]
+  N390["14｜紳組（長子）"]
+  N848["15｜元福（次子）"]
+  N847["15｜順福（長子）"]
+  N389["14｜勝洋（次子）"]
+  N852["15｜時福"]
+  N849["15｜受福（長子）"]
+  N851["16｜德順（次子）"]
+  N850["16｜永順（長子）"]
+  N142["12｜永欽（三子）"]
+  N241["13｜壽海（長子）"]
+  N308["14｜富春（長子）"]
+  N240["13｜壽山（次子）"]
+  N307["14｜祥春（次子）"]
+  N853["15｜盈福"]
+  N306["14｜榮招（長子）"]
+  N141["12｜永榮（四子）"]
+  N239["13｜朝元"]
+  N353["14｜聖大（長子）"]
+  N140["12｜永吉（次子）"]
+  N238["13｜臘"]
+  N400["14｜蜃（長子）"]
+  N108 --> N140
+  N108 --> N141
+  N108 --> N142
+  N108 --> N143
+  N108 --> N144
+  N144 --> N243
+  N243 --> N382
+  N382 --> N854
+  N143 --> N242
+  N242 --> N389
+  N242 --> N390
+  N390 --> N847
+  N390 --> N848
+  N389 --> N849
+  N389 --> N852
+  N849 --> N850
+  N849 --> N851
+  N142 --> N240
+  N142 --> N241
+  N241 --> N308
+  N240 --> N306
+  N240 --> N307
+  N307 --> N853
+  N141 --> N239
+  N239 --> N353
+  N140 --> N238
+  N238 --> N400
+  class N108 g2
+  class N144,N243,N382,N143,N242,N390,N389,N142,N241,N308,N240,N307,N306,N141,N239,N353,N140,N238,N400 g3
+  class N854,N848,N847,N852,N849,N851,N850,N853 g4
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N109">
+  <div class="branch-head">
+    <span class="branch-badge">31</span>
+    <div class="branch-head-text">
+      <h3>11世 兆麟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶</p>
+    </div>
+    <span class="branch-count">1 人 · 1 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N109["11｜兆麟"]
+  class N109 g2
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N110">
+  <div class="branch-head">
+    <span class="branch-badge">32</span>
+    <div class="branch-head-text">
+      <h3>11世 彥麟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶</p>
+    </div>
+    <span class="branch-count">49 人 · 49 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N110["11｜彥麟"]
+  N159["12｜宗會"]
+  N203["13｜卿元"]
+  N300["14｜鳴鳳"]
+  N968["15｜丕文"]
+  N969["16｜祥遷"]
+  N970["17｜近富"]
+  N972["18｜思智（次子）"]
+  N971["18｜思孝（長子）"]
+  N299["14｜聽鳳"]
+  N955["15｜丕顯（次子）"]
+  N958["16｜祥富（三子）"]
+  N966["17｜近孝（三子）"]
+  N965["17｜近和（次子）"]
+  N964["17｜近信（長子）"]
+  N967["18｜思禮"]
+  N957["16｜祥和（次子）"]
+  N962["17｜近仁"]
+  N963["18｜思德"]
+  N956["16｜祥泰（長子）"]
+  N960["17｜近禮（次子）"]
+  N959["17｜近義（長子）"]
+  N961["18｜思誠"]
+  N950["15｜丕承（長子）"]
+  N951["16｜祥順"]
+  N952["17｜近佳"]
+  N954["18｜思義（次子）"]
+  N953["18｜思勉（長子）"]
+  N202["13｜佛元"]
+  N279["14｜敖大"]
+  N979["15｜丕鴻（嗣次子）"]
+  N980["16｜祥鏞"]
+  N981["17｜近美"]
+  N973["15｜丕揚（嗣長子）"]
+  N974["16｜祥興"]
+  N975["17｜近貴"]
+  N978["18｜思信（三子）"]
+  N977["18｜思忠（次子）"]
+  N976["18｜思悌（長子）"]
+  N278["14｜傅生"]
+  N158["12｜宗敘"]
+  N201["13｜卿豐"]
+  N302["14｜文華"]
+  N946["15｜德潛（嗣子）"]
+  N947["16｜祥衡"]
+  N945["15｜德富"]
+  N301["14｜文久"]
+  N949["15｜德清（三子）"]
+  N948["15｜德潤（長子）"]
+  N110 --> N158
+  N110 --> N159
+  N159 --> N202
+  N159 --> N203
+  N203 --> N299
+  N203 --> N300
+  N300 --> N968
+  N968 --> N969
+  N969 --> N970
+  N970 --> N971
+  N970 --> N972
+  N299 --> N950
+  N299 --> N955
+  N955 --> N956
+  N955 --> N957
+  N955 --> N958
+  N958 --> N964
+  N958 --> N965
+  N958 --> N966
+  N964 --> N967
+  N957 --> N962
+  N962 --> N963
+  N956 --> N959
+  N956 --> N960
+  N959 --> N961
+  N950 --> N951
+  N951 --> N952
+  N952 --> N953
+  N952 --> N954
+  N202 --> N278
+  N202 --> N279
+  N279 --> N973
+  N279 --> N979
+  N979 --> N980
+  N980 --> N981
+  N973 --> N974
+  N974 --> N975
+  N975 --> N976
+  N975 --> N977
+  N975 --> N978
+  N158 --> N201
+  N201 --> N301
+  N201 --> N302
+  N302 --> N945
+  N302 --> N946
+  N946 --> N947
+  N301 --> N948
+  N301 --> N949
+  class N110 g2
+  class N159,N203,N300,N299,N202,N279,N278,N158,N201,N302,N301 g3
+  class N968,N969,N970,N955,N958,N966,N965,N964,N957,N962,N956,N960,N959,N950,N951,N952,N979,N980,N981,N973,N974,N975,N946,N947,N945,N949,N948 g4
+  class N972,N971,N967,N963,N961,N954,N953,N978,N977,N976 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N167">
+  <div class="branch-head">
+    <span class="branch-badge">33</span>
+    <div class="branch-head-text">
+      <h3>12世 宗正 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶 › 11世爲麟</p>
+    </div>
+    <span class="branch-count">74 人 · 74 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N167["12｜宗正（長子）"]
+  N206["13｜旭朝（三子）"]
+  N347["14｜汝達"]
+  N911["15｜煒（次子）"]
+  N912["16｜大馨"]
+  N914["17｜祥生（次子）"]
+  N913["17｜春生（長子）"]
+  N346["14｜汝敏"]
+  N915["15｜煒（嗣子）"]
+  N345["14｜汝孝（長子）"]
+  N907["15｜斌（嗣子）"]
+  N908["16｜大章"]
+  N909["17｜春生"]
+  N910["18｜岐鳴"]
+  N205["13｜德衡（長子）"]
+  N321["14｜魯賢（次子）"]
+  N864["15｜奕林"]
+  N865["16｜濩美"]
+  N866["17｜紀根（嗣子）"]
+  N320["14｜魯確（長子）"]
+  N860["15｜奕本（次子）"]
+  N861["16｜武美"]
+  N862["17｜紀立"]
+  N863["18｜魁林（嗣子）"]
+  N855["15｜奕榮（長子）"]
+  N856["16｜韶美"]
+  N857["17｜紀根"]
+  N858["18｜魁林"]
+  N859["19｜柏春"]
+  N204["13｜兆桂（次子）"]
+  N288["14｜汝讓（次子）"]
+  N882["15｜永清（次子）"]
+  N883["16｜大升"]
+  N877["15｜永泰（長子）"]
+  N878["16｜大義"]
+  N881["17｜閏元（三子）"]
+  N880["17｜履元（次子）"]
+  N879["17｜祥元（長子）"]
+  N287["14｜汝嘉（三子）"]
+  N884["15｜永山"]
+  N885["16｜大武"]
+  N886["17｜鳳元"]
+  N286["14｜汝和（長子）"]
+  N876["15｜茂福（四子）"]
+  N874["15｜茂荷（三子）"]
+  N875["16｜大成"]
+  N872["15｜茂松（次子）"]
+  N873["16｜大器"]
+  N867["15｜茂椿（長子）"]
+  N870["16｜大文（三子）"]
+  N871["17｜纏吉"]
+  N869["16｜大化（次子）"]
+  N868["16｜大珍（長子）"]
+  N285["14｜汝卿（四子）"]
+  N902["15｜永厚（次子）"]
+  N905["16｜大成（三子）"]
+  N904["16｜大昌（次子）"]
+  N903["16｜大林（長子）"]
+  N906["17｜龍元"]
+  N887["15｜永博（長子）"]
+  N898["16｜葆善（五子）"]
+  N901["17｜震元"]
+  N897["16｜大信（四子）"]
+  N900["17｜晉元（次子）"]
+  N899["17｜乾元（長子）"]
+  N896["16｜大智（三子）"]
+  N893["16｜大禮（次子）"]
+  N895["17｜坤元（次子）"]
+  N894["17｜掄元（長子）"]
+  N888["16｜大仁（長子）"]
+  N891["17｜謙元（三子）"]
+  N890["17｜鼎元（次子）"]
+  N892["18｜純一"]
+  N889["17｜啟元（長子）"]
+  N167 --> N204
+  N167 --> N205
+  N167 --> N206
+  N206 --> N345
+  N206 --> N346
+  N206 --> N347
+  N347 --> N911
+  N911 --> N912
+  N912 --> N913
+  N912 --> N914
+  N346 --> N915
+  N345 --> N907
+  N907 --> N908
+  N908 --> N909
+  N909 --> N910
+  N205 --> N320
+  N205 --> N321
+  N321 --> N864
+  N864 --> N865
+  N865 --> N866
+  N320 --> N855
+  N320 --> N860
+  N860 --> N861
+  N861 --> N862
+  N862 --> N863
+  N855 --> N856
+  N856 --> N857
+  N857 --> N858
+  N858 --> N859
+  N204 --> N285
+  N204 --> N286
+  N204 --> N287
+  N204 --> N288
+  N288 --> N877
+  N288 --> N882
+  N882 --> N883
+  N877 --> N878
+  N878 --> N879
+  N878 --> N880
+  N878 --> N881
+  N287 --> N884
+  N884 --> N885
+  N885 --> N886
+  N286 --> N867
+  N286 --> N872
+  N286 --> N874
+  N286 --> N876
+  N874 --> N875
+  N872 --> N873
+  N867 --> N868
+  N867 --> N869
+  N867 --> N870
+  N870 --> N871
+  N285 --> N887
+  N285 --> N902
+  N902 --> N903
+  N902 --> N904
+  N902 --> N905
+  N903 --> N906
+  N887 --> N888
+  N887 --> N893
+  N887 --> N896
+  N887 --> N897
+  N887 --> N898
+  N898 --> N901
+  N897 --> N899
+  N897 --> N900
+  N893 --> N894
+  N893 --> N895
+  N888 --> N889
+  N888 --> N890
+  N888 --> N891
+  N890 --> N892
+  class N167,N206,N347,N346,N345,N205,N321,N320,N204,N288,N287,N286,N285 g3
+  class N911,N912,N914,N913,N915,N907,N908,N909,N864,N865,N866,N860,N861,N862,N855,N856,N857,N882,N883,N877,N878,N881,N880,N879,N884,N885,N886,N876,N874,N875,N872,N873,N867,N870,N871,N869,N868,N902,N905,N904 g4
+  class N903,N906,N887,N898,N901,N897,N900,N899,N896,N893,N895,N894,N888,N891,N890,N889 g4
+  class N910,N863,N858,N859,N892 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N168">
+  <div class="branch-head">
+    <span class="branch-badge">34</span>
+    <div class="branch-head-text">
+      <h3>12世 宗端 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶 › 11世爲麟</p>
+    </div>
+    <span class="branch-count">25 人 · 25 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N168["12｜宗端"]
+  N208["13｜綏來"]
+  N386["14｜奎"]
+  N385["14｜儔"]
+  N923["15｜篪（次子）"]
+  N925["16｜煥庭（三子）"]
+  N929["17｜玉高"]
+  N924["16｜華庭（次子）"]
+  N926["17｜玉德"]
+  N927["18｜魁祥"]
+  N928["19｜志寬"]
+  N916["15｜壎（長子）"]
+  N917["16｜榮庭（嗣子）"]
+  N919["17｜玉慶（次子）"]
+  N921["18｜魁俊"]
+  N922["19｜志堅"]
+  N918["17｜玉燦（長子）"]
+  N920["18｜魁祥（嗣子）"]
+  N384["14｜倓"]
+  N930["15｜珠（嗣子）"]
+  N931["16｜耀庭"]
+  N933["17｜玉富（次子）"]
+  N932["17｜玉泉（長子）"]
+  N935["18｜魁銘（次子）"]
+  N934["18｜魁霖（長子）"]
+  N168 --> N208
+  N208 --> N384
+  N208 --> N385
+  N208 --> N386
+  N385 --> N916
+  N385 --> N923
+  N923 --> N924
+  N923 --> N925
+  N925 --> N929
+  N924 --> N926
+  N926 --> N927
+  N927 --> N928
+  N916 --> N917
+  N917 --> N918
+  N917 --> N919
+  N919 --> N921
+  N921 --> N922
+  N918 --> N920
+  N384 --> N930
+  N930 --> N931
+  N931 --> N932
+  N931 --> N933
+  N932 --> N934
+  N932 --> N935
+  class N168,N208,N386,N385,N384 g3
+  class N923,N925,N929,N924,N926,N916,N917,N919,N918,N930,N931,N933,N932 g4
+  class N927,N928,N921,N922,N920,N935,N934 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N169">
+  <div class="branch-head">
+    <span class="branch-badge">35</span>
+    <div class="branch-head-text">
+      <h3>12世 宗謙 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶 › 11世爲麟</p>
+    </div>
+    <span class="branch-count">13 人 · 13 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N169["12｜宗謙"]
+  N210["13｜時霈"]
+  N348["14｜汝諧"]
+  N944["15｜信（四子）"]
+  N943["15｜忠（三子）"]
+  N941["15｜行（次子）"]
+  N942["16｜祥發"]
+  N936["15｜文（長子）"]
+  N940["16｜協一（四子）"]
+  N939["16｜惟一（三子）"]
+  N938["16｜揆一（次子）"]
+  N937["16｜爵一（長子）"]
+  N209["13｜時桂"]
+  N169 --> N209
+  N169 --> N210
+  N210 --> N348
+  N348 --> N936
+  N348 --> N941
+  N348 --> N943
+  N348 --> N944
+  N941 --> N942
+  N936 --> N937
+  N936 --> N938
+  N936 --> N939
+  N936 --> N940
+  class N169,N210,N348,N209 g3
+  class N944,N943,N941,N942,N936,N940,N939,N938,N937 g4
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N112">
+  <div class="branch-head">
+    <span class="branch-badge">36</span>
+    <div class="branch-head-text">
+      <h3>11世 詠麟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶</p>
+    </div>
+    <span class="branch-count">9 人 · 9 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N112["11｜詠麟"]
+  N185["12｜宗祥"]
+  N207["13｜博聞"]
+  N298["14｜書大"]
+  N982["15｜丕孚"]
+  N184["12｜宗全"]
+  N200["13｜象倫"]
+  N199["13｜耀倫"]
+  N198["13｜大倫"]
+  N112 --> N184
+  N112 --> N185
+  N185 --> N207
+  N207 --> N298
+  N298 --> N982
+  N184 --> N198
+  N184 --> N199
+  N184 --> N200
+  class N112 g2
+  class N185,N207,N298,N184,N200,N199,N198 g3
+  class N982 g4
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N113">
+  <div class="branch-head">
+    <span class="branch-badge">37</span>
+    <div class="branch-head-text">
+      <h3>11世 雋麟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆 › 10世方慶</p>
+    </div>
+    <span class="branch-count">20 人 · 20 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N113["11｜雋麟"]
+  N187["12｜宗高"]
+  N211["13｜壽元"]
+  N305["14｜起鳳"]
+  N991["15｜丕全（三子）"]
+  N992["16｜祥茂"]
+  N996["17｜近惠（四子）"]
+  N995["17｜近敏（三子）"]
+  N994["17｜近寬（次子）"]
+  N993["17｜近恭（長子）"]
+  N986["15｜丕乾（長子）"]
+  N987["16｜祥林"]
+  N989["17｜近勇（次子）"]
+  N988["17｜近學（長子）"]
+  N990["18｜思道"]
+  N304["14｜志鳳"]
+  N983["15｜丕澍"]
+  N984["16｜祥福"]
+  N985["17｜近美（嗣子）"]
+  N186["12｜宗義"]
+  N113 --> N186
+  N113 --> N187
+  N187 --> N211
+  N211 --> N304
+  N211 --> N305
+  N305 --> N986
+  N305 --> N991
+  N991 --> N992
+  N992 --> N993
+  N992 --> N994
+  N992 --> N995
+  N992 --> N996
+  N986 --> N987
+  N987 --> N988
+  N987 --> N989
+  N988 --> N990
+  N304 --> N983
+  N983 --> N984
+  N984 --> N985
+  class N113 g2
+  class N187,N211,N305,N304,N186 g3
+  class N991,N992,N996,N995,N994,N993,N986,N987,N989,N988,N983,N984,N985 g4
+  class N990 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N78">
+  <div class="branch-head">
+    <span class="branch-badge">38</span>
+    <div class="branch-head-text">
+      <h3>10世 方賡 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世德隆</p>
+    </div>
+    <span class="branch-count">53 人 · 53 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N78["10｜方賡（次子）"]
+  N118["11｜種麟（長子）"]
+  N176["12｜師湯（次子）"]
+  N223["13｜學文"]
+  N175["12｜師武（三子）"]
+  N222["13｜聖生（長子）"]
+  N392["14｜纏綬（次子）"]
+  N799["15｜上達"]
+  N800["16｜傅增"]
+  N801["17｜錦燦"]
+  N391["14｜纏林（長子）"]
+  N798["15｜耕受"]
+  N221["13｜文生（次子）"]
+  N220["13｜安生（三子）"]
+  N318["14｜福齡（三子）"]
+  N804["15｜星燦（次子）"]
+  N805["16｜慶秀"]
+  N317["14｜崧齡（長子）"]
+  N316["14｜寶齡（次子）"]
+  N802["15｜星煒"]
+  N803["16｜慶鎔"]
+  N174["12｜師孟（四子）"]
+  N215["13｜學疇"]
+  N173["12｜師堯（長子）"]
+  N212["13｜祥生"]
+  N381["14｜政林"]
+  N795["15｜耕富（次子）"]
+  N796["16｜又增"]
+  N797["17｜傳發（嗣子）"]
+  N792["15｜耘隆（長子）"]
+  N793["16｜壽增"]
+  N794["17｜傳發"]
+  N117["11｜毓麟（三子）"]
+  N116["11｜上麟（次子）"]
+  N131["12｜師賢（長子）"]
+  N231["13｜增壽（長子）"]
+  N303["14｜太源"]
+  N230["13｜增元（三子）"]
+  N229["13｜元龍（次子）"]
+  N284["14｜太祥（長子）"]
+  N806["15｜如江（嗣子）"]
+  N808["16｜保大（次子）"]
+  N807["16｜松大（長子）"]
+  N283["14｜太林（次子）"]
+  N809["15｜如山（次子）"]
+  N130["12｜師級（次子）"]
+  N129["12｜師契（三子）"]
+  N213["13｜學晉"]
+  N315["14｜長林（次子）"]
+  N810["15｜慶雲"]
+  N812["16｜正二（次子）"]
+  N811["16｜正大（長子）"]
+  N314["14｜保林（長子）"]
+  N78 --> N116
+  N78 --> N117
+  N78 --> N118
+  N118 --> N173
+  N118 --> N174
+  N118 --> N175
+  N118 --> N176
+  N176 --> N223
+  N175 --> N220
+  N175 --> N221
+  N175 --> N222
+  N222 --> N391
+  N222 --> N392
+  N392 --> N799
+  N799 --> N800
+  N800 --> N801
+  N391 --> N798
+  N220 --> N316
+  N220 --> N317
+  N220 --> N318
+  N318 --> N804
+  N804 --> N805
+  N316 --> N802
+  N802 --> N803
+  N174 --> N215
+  N173 --> N212
+  N212 --> N381
+  N381 --> N792
+  N381 --> N795
+  N795 --> N796
+  N796 --> N797
+  N792 --> N793
+  N793 --> N794
+  N116 --> N129
+  N116 --> N130
+  N116 --> N131
+  N131 --> N229
+  N131 --> N230
+  N131 --> N231
+  N231 --> N303
+  N229 --> N283
+  N229 --> N284
+  N284 --> N806
+  N806 --> N807
+  N806 --> N808
+  N283 --> N809
+  N129 --> N213
+  N213 --> N314
+  N213 --> N315
+  N315 --> N810
+  N810 --> N811
+  N810 --> N812
+  class N78,N118,N117,N116 g2
+  class N176,N223,N175,N222,N392,N391,N221,N220,N318,N317,N316,N174,N215,N173,N212,N381,N131,N231,N303,N230,N229,N284,N283,N130,N129,N213,N315,N314 g3
+  class N799,N800,N801,N798,N804,N805,N802,N803,N795,N796,N797,N792,N793,N794,N806,N808,N807,N809,N810,N812,N811 g4
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N82">
+  <div class="branch-head">
+    <span class="branch-badge">39</span>
+    <div class="branch-head-text">
+      <h3>10世 方奏 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世治隆</p>
+    </div>
+    <span class="branch-count">90 人 · 90 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N82["10｜方奏"]
+  N101["11｜瑞麟"]
+  N100["11｜現麟"]
+  N172["12｜江濱"]
+  N250["13｜旭升"]
+  N344["14｜炳曾"]
+  N1065["15｜懷法（嗣子）"]
+  N249["13｜旭初"]
+  N343["14｜若曾"]
+  N1063["15｜懷禮（長子）"]
+  N1064["16｜增德（嗣子）"]
+  N342["14｜如曾"]
+  N1062["15｜懷德"]
+  N171["12｜江渭"]
+  N248["13｜承賢"]
+  N326["14｜鳳昭"]
+  N325["14｜纏法"]
+  N247["13｜承方"]
+  N246["13｜承如"]
+  N324["14｜鳳章"]
+  N1060["15｜上國"]
+  N1061["16｜增德"]
+  N170["12｜江洲"]
+  N245["13｜鳳元"]
+  N244["13｜祥元"]
+  N99["11｜大麟"]
+  N152["12｜義原"]
+  N258["13｜育才"]
+  N396["14｜大彰"]
+  N1038["15｜雲華"]
+  N257["13｜育如"]
+  N151["12｜禮原"]
+  N256["13｜育昌"]
+  N150["12｜智原"]
+  N149["12｜性原"]
+  N232["13｜修身"]
+  N148["12｜仁原"]
+  N188["13｜育萬"]
+  N399["14｜洪顯"]
+  N1030["15｜貴生（次子）"]
+  N1031["16｜臘孚"]
+  N1032["17｜汝霖"]
+  N1035["18｜能敏（三子）"]
+  N1034["18｜能信（次子）"]
+  N1033["18｜能寬（長子）"]
+  N1026["15｜祿生（長子）"]
+  N1027["16｜德孚"]
+  N1028["17｜汝揖"]
+  N1029["18｜能恭"]
+  N398["14｜洪寶"]
+  N397["14｜洪士"]
+  N1036["15｜傳生（嗣子）"]
+  N1037["16｜瑞孚"]
+  N98["11｜世麟"]
+  N134["12｜福原"]
+  N255["13｜繼林"]
+  N388["14｜復貴"]
+  N387["14｜復臣"]
+  N254["13｜平林"]
+  N133["12｜祿原"]
+  N253["13｜高林"]
+  N413["14｜祥增"]
+  N1040["15｜繼宗（次子）"]
+  N1041["16｜增林"]
+  N1042["17｜福康"]
+  N252["13｜介林"]
+  N276["14｜洪增"]
+  N1039["15｜光宗（嗣子）"]
+  N132["12｜壽原"]
+  N197["13｜介祥"]
+  N277["14｜聖瑞"]
+  N1057["15｜振國（次子）"]
+  N1058["16｜增壽"]
+  N1059["17｜近勇"]
+  N1050["15｜華國（長子）"]
+  N1052["16｜增林（次子）"]
+  N1056["17｜祿康（次子）"]
+  N1055["17｜福康（長子）"]
+  N1051["16｜增魁（長子）"]
+  N1054["17｜近仁（次子）"]
+  N1053["17｜近智（長子）"]
+  N196["13｜介敘"]
+  N275["14｜文瑞"]
+  N1049["15｜安國（三子）"]
+  N1048["15｜裕國（次子）"]
+  N1043["15｜經國（長子）"]
+  N1045["16｜根霖（次子）"]
+  N1047["17｜銀產（次子）"]
+  N1046["17｜產大（長子）"]
+  N1044["16｜增福（長子）"]
+  N82 --> N98
+  N82 --> N99
+  N82 --> N100
+  N82 --> N101
+  N100 --> N170
+  N100 --> N171
+  N100 --> N172
+  N172 --> N249
+  N172 --> N250
+  N250 --> N344
+  N344 --> N1065
+  N249 --> N342
+  N249 --> N343
+  N343 --> N1063
+  N1063 --> N1064
+  N342 --> N1062
+  N171 --> N246
+  N171 --> N247
+  N171 --> N248
+  N248 --> N325
+  N248 --> N326
+  N246 --> N324
+  N324 --> N1060
+  N1060 --> N1061
+  N170 --> N244
+  N170 --> N245
+  N99 --> N148
+  N99 --> N149
+  N99 --> N150
+  N99 --> N151
+  N99 --> N152
+  N152 --> N257
+  N152 --> N258
+  N258 --> N396
+  N396 --> N1038
+  N151 --> N256
+  N149 --> N232
+  N148 --> N188
+  N188 --> N397
+  N188 --> N398
+  N188 --> N399
+  N399 --> N1026
+  N399 --> N1030
+  N1030 --> N1031
+  N1031 --> N1032
+  N1032 --> N1033
+  N1032 --> N1034
+  N1032 --> N1035
+  N1026 --> N1027
+  N1027 --> N1028
+  N1028 --> N1029
+  N397 --> N1036
+  N1036 --> N1037
+  N98 --> N132
+  N98 --> N133
+  N98 --> N134
+  N134 --> N254
+  N134 --> N255
+  N255 --> N387
+  N255 --> N388
+  N133 --> N252
+  N133 --> N253
+  N253 --> N413
+  N413 --> N1040
+  N1040 --> N1041
+  N1041 --> N1042
+  N252 --> N276
+  N276 --> N1039
+  N132 --> N196
+  N132 --> N197
+  N197 --> N277
+  N277 --> N1050
+  N277 --> N1057
+  N1057 --> N1058
+  N1058 --> N1059
+  N1050 --> N1051
+  N1050 --> N1052
+  N1052 --> N1055
+  N1052 --> N1056
+  N1051 --> N1053
+  N1051 --> N1054
+  N196 --> N275
+  N275 --> N1043
+  N275 --> N1048
+  N275 --> N1049
+  N1043 --> N1044
+  N1043 --> N1045
+  N1045 --> N1046
+  N1045 --> N1047
+  class N82,N101,N100,N99,N98 g2
+  class N172,N250,N344,N249,N343,N342,N171,N248,N326,N325,N247,N246,N324,N170,N245,N244,N152,N258,N396,N257,N151,N256,N150,N149,N232,N148,N188,N399,N398,N397,N134,N255,N388,N387,N254,N133,N253,N413,N252,N276 g3
+  class N132,N197,N277,N196,N275 g3
+  class N1065,N1063,N1064,N1062,N1060,N1061,N1038,N1030,N1031,N1032,N1026,N1027,N1028,N1036,N1037,N1040,N1041,N1042,N1039,N1057,N1058,N1059,N1050,N1052,N1056,N1055,N1051,N1054,N1053,N1049,N1048,N1043,N1045,N1047,N1046,N1044 g4
+  class N1035,N1034,N1033,N1029 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N83">
+  <div class="branch-head">
+    <span class="branch-badge">40</span>
+    <div class="branch-head-text">
+      <h3>10世 方調 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世治隆</p>
+    </div>
+    <span class="branch-count">44 人 · 44 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N83["10｜方調"]
+  N114["11｜若麟"]
+  N180["12｜通海"]
+  N259["13｜勝祚"]
+  N292["14｜南秀"]
+  N1018["15｜大梓（三子）"]
+  N1019["16｜肇昌"]
+  N1021["17｜春茂（次子）"]
+  N1020["17｜春方（長子）"]
+  N1015["15｜大榕（次子）"]
+  N1016["16｜培本"]
+  N1017["17｜春年"]
+  N291["14｜南正"]
+  N1011["15｜大慶（長子）"]
+  N1012["16｜璣嶔（嗣子）"]
+  N1013["17｜福正"]
+  N290["14｜南校"]
+  N1014["15｜大椿（嗣子）"]
+  N289["14｜南德"]
+  N1022["15｜大賓"]
+  N1024["16｜瑤嶔（次子）"]
+  N1023["16｜璣嶔（長子）"]
+  N1025["17｜福宜"]
+  N179["12｜於海"]
+  N237["13｜有能"]
+  N352["14｜寶德"]
+  N997["15｜龍慶（長子）"]
+  N998["16｜耿"]
+  N999["17｜憲章"]
+  N1001["18｜士祥（次子）"]
+  N1000["18｜士楨（長子）"]
+  N236["13｜有全"]
+  N351["14｜寶阜"]
+  N1008["15｜虎慶（嗣子）"]
+  N1009["16｜耿（嗣子）"]
+  N1010["17｜憲清"]
+  N350["14｜寶生"]
+  N1002["15｜麟慶（長子）"]
+  N1003["16｜炳"]
+  N1004["17｜憲成"]
+  N349["14｜寶和"]
+  N1005["15｜鳳慶（嗣子）"]
+  N1006["16｜燮"]
+  N1007["17｜憲成（嗣子）"]
+  N83 --> N114
+  N114 --> N179
+  N114 --> N180
+  N180 --> N259
+  N259 --> N289
+  N259 --> N290
+  N259 --> N291
+  N259 --> N292
+  N292 --> N1015
+  N292 --> N1018
+  N1018 --> N1019
+  N1019 --> N1020
+  N1019 --> N1021
+  N1015 --> N1016
+  N1016 --> N1017
+  N291 --> N1011
+  N1011 --> N1012
+  N1012 --> N1013
+  N290 --> N1014
+  N289 --> N1022
+  N1022 --> N1023
+  N1022 --> N1024
+  N1023 --> N1025
+  N179 --> N236
+  N179 --> N237
+  N237 --> N352
+  N352 --> N997
+  N997 --> N998
+  N998 --> N999
+  N999 --> N1000
+  N999 --> N1001
+  N236 --> N349
+  N236 --> N350
+  N236 --> N351
+  N351 --> N1008
+  N1008 --> N1009
+  N1009 --> N1010
+  N350 --> N1002
+  N1002 --> N1003
+  N1003 --> N1004
+  N349 --> N1005
+  N1005 --> N1006
+  N1006 --> N1007
+  class N83,N114 g2
+  class N180,N259,N292,N291,N290,N289,N179,N237,N352,N236,N351,N350,N349 g3
+  class N1018,N1019,N1021,N1020,N1015,N1016,N1017,N1011,N1012,N1013,N1014,N1022,N1024,N1023,N1025,N997,N998,N999,N1008,N1009,N1010,N1002,N1003,N1004,N1005,N1006,N1007 g4
+  class N1001,N1000 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N84">
+  <div class="branch-head">
+    <span class="branch-badge">41</span>
+    <div class="branch-head-text">
+      <h3>10世 方鼐 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康 › 9世治隆</p>
+    </div>
+    <span class="branch-count">32 人 · 32 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N84["10｜方鼐"]
+  N122["11｜聖麟"]
+  N177["12｜連元"]
+  N261["13｜鳳祥"]
+  N260["13｜鳳占"]
+  N121["11｜似麟"]
+  N137["12｜順"]
+  N274["13｜希言"]
+  N319["14｜印山"]
+  N273["13｜太賢"]
+  N312["14｜潤川"]
+  N136["12｜壽"]
+  N195["13｜長庚"]
+  N409["14｜纏增"]
+  N1066["15｜燦興（嗣子）"]
+  N1067["16｜儒珍"]
+  N1068["17｜憲文"]
+  N408["14｜敘增"]
+  N1075["15｜保興（三子）"]
+  N1077["16｜金德（次子）"]
+  N1076["16｜金大（長子）"]
+  N1069["15｜德興（次子）"]
+  N1072["16｜燾（三子）"]
+  N1073["17｜憲文"]
+  N1074["18｜士林"]
+  N1071["16｜懷珍（次子）"]
+  N1070["16｜隆珍（長子）"]
+  N135["12｜培"]
+  N194["13｜太豐"]
+  N311["14｜珊"]
+  N310["14｜滿"]
+  N309["14｜勝方"]
+  N84 --> N121
+  N84 --> N122
+  N122 --> N177
+  N177 --> N260
+  N177 --> N261
+  N121 --> N135
+  N121 --> N136
+  N121 --> N137
+  N137 --> N273
+  N137 --> N274
+  N274 --> N319
+  N273 --> N312
+  N136 --> N195
+  N195 --> N408
+  N195 --> N409
+  N409 --> N1066
+  N1066 --> N1067
+  N1067 --> N1068
+  N408 --> N1069
+  N408 --> N1075
+  N1075 --> N1076
+  N1075 --> N1077
+  N1069 --> N1070
+  N1069 --> N1071
+  N1069 --> N1072
+  N1072 --> N1073
+  N1073 --> N1074
+  N135 --> N194
+  N194 --> N309
+  N194 --> N310
+  N194 --> N311
+  class N84,N122,N121 g2
+  class N177,N261,N260,N137,N274,N319,N273,N312,N136,N195,N409,N408,N135,N194,N311,N310,N309 g3
+  class N1066,N1067,N1068,N1075,N1077,N1076,N1069,N1072,N1073,N1071,N1070 g4
+  class N1074 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N55">
+  <div class="branch-head">
+    <span class="branch-badge">42</span>
+    <div class="branch-head-text">
+      <h3>9世 綬隆 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁 › 8世時康</p>
+    </div>
+    <span class="branch-count">73 人 · 73 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N55["9｜綬隆"]
+  N86["10｜方選"]
+  N120["11｜德麟"]
+  N161["12｜師臣"]
+  N226["13｜祖達"]
+  N160["12｜師曾"]
+  N219["13｜祖坤"]
+  N380["14｜慶華"]
+  N1116["15｜會全（四子）"]
+  N1120["16｜懷恩（五子）"]
+  N1119["16｜懷榮（三子）"]
+  N1118["16｜懷修（次子）"]
+  N1122["17｜守良（嗣子）"]
+  N1123["18｜清芳"]
+  N1117["16｜懷益（長子）"]
+  N1121["17｜守業（嗣子）"]
+  N1111["15｜畊全（三子）"]
+  N1112["16｜懷佔"]
+  N1113["17｜守和"]
+  N1114["18｜清富"]
+  N1115["19｜培成"]
+  N1095["15｜虎全（次子）"]
+  N1097["16｜懷良（次子）"]
+  N1108["17｜守家"]
+  N1110["18｜清傳（次子）"]
+  N1109["18｜清海（長子）"]
+  N1096["16｜懷欽（長子）"]
+  N1100["17｜守庭（三子）"]
+  N1105["18｜清彥（次子）"]
+  N1104["18｜清順（長子）"]
+  N1107["19｜耀亮（次子）"]
+  N1106["19｜耀成（長子）"]
+  N1099["17｜守孝（次子）"]
+  N1103["18｜清寶"]
+  N1098["17｜守忠（長子）"]
+  N1101["18｜清勝"]
+  N1102["19｜金城"]
+  N1083["15｜雙全（長子）"]
+  N1086["16｜懷信（三子）"]
+  N1094["17｜守良（嗣子）"]
+  N1085["16｜懷義（次子）"]
+  N1091["17｜守基（次子）"]
+  N1090["17｜守廉（長子）"]
+  N1092["18｜清貴"]
+  N1093["19｜金成"]
+  N1084["16｜懷仁（長子）"]
+  N1087["17｜守貞"]
+  N1088["18｜清澤"]
+  N1089["19｜有成"]
+  N218["13｜祖乾"]
+  N379["14｜龍增"]
+  N1082["15｜酉全"]
+  N378["14｜餘增"]
+  N377["14｜慶增"]
+  N1078["15｜富全"]
+  N1079["16｜裕慶"]
+  N1080["17｜守家（嗣子）"]
+  N1081["18｜清和"]
+  N85["10｜方遷"]
+  N119["11｜是麟"]
+  N164["12｜師憲"]
+  N217["13｜雲峯"]
+  N412["14｜秩南"]
+  N216["13｜雲峙"]
+  N411["14｜順南"]
+  N1125["15｜應全（次子）"]
+  N1124["15｜德全（長子）"]
+  N1126["16｜懷榮（嗣子）"]
+  N1129["17｜守良（長子）"]
+  N1128["17｜守本（三子）"]
+  N1127["17｜守業（次子）"]
+  N1130["18｜清溪"]
+  N410["14｜慶南"]
+  N55 --> N85
+  N55 --> N86
+  N86 --> N120
+  N120 --> N160
+  N120 --> N161
+  N161 --> N226
+  N160 --> N218
+  N160 --> N219
+  N219 --> N380
+  N380 --> N1083
+  N380 --> N1095
+  N380 --> N1111
+  N380 --> N1116
+  N1116 --> N1117
+  N1116 --> N1118
+  N1116 --> N1119
+  N1116 --> N1120
+  N1118 --> N1122
+  N1122 --> N1123
+  N1117 --> N1121
+  N1111 --> N1112
+  N1112 --> N1113
+  N1113 --> N1114
+  N1114 --> N1115
+  N1095 --> N1096
+  N1095 --> N1097
+  N1097 --> N1108
+  N1108 --> N1109
+  N1108 --> N1110
+  N1096 --> N1098
+  N1096 --> N1099
+  N1096 --> N1100
+  N1100 --> N1104
+  N1100 --> N1105
+  N1104 --> N1106
+  N1104 --> N1107
+  N1099 --> N1103
+  N1098 --> N1101
+  N1101 --> N1102
+  N1083 --> N1084
+  N1083 --> N1085
+  N1083 --> N1086
+  N1086 --> N1094
+  N1085 --> N1090
+  N1085 --> N1091
+  N1090 --> N1092
+  N1092 --> N1093
+  N1084 --> N1087
+  N1087 --> N1088
+  N1088 --> N1089
+  N218 --> N377
+  N218 --> N378
+  N218 --> N379
+  N379 --> N1082
+  N377 --> N1078
+  N1078 --> N1079
+  N1079 --> N1080
+  N1080 --> N1081
+  N85 --> N119
+  N119 --> N164
+  N164 --> N216
+  N164 --> N217
+  N217 --> N412
+  N216 --> N410
+  N216 --> N411
+  N411 --> N1124
+  N411 --> N1125
+  N1124 --> N1126
+  N1126 --> N1127
+  N1126 --> N1128
+  N1126 --> N1129
+  N1127 --> N1130
+  class N55,N86,N120,N85,N119 g2
+  class N161,N226,N160,N219,N380,N218,N379,N378,N377,N164,N217,N412,N216,N411,N410 g3
+  class N1116,N1120,N1119,N1118,N1122,N1117,N1121,N1111,N1112,N1113,N1095,N1097,N1108,N1096,N1100,N1099,N1098,N1083,N1086,N1094,N1085,N1091,N1090,N1084,N1087,N1082,N1078,N1079,N1080,N1125,N1124,N1126,N1129,N1128,N1127 g4
+  class N1123,N1114,N1115,N1110,N1109,N1105,N1104,N1107,N1106,N1103,N1101,N1102,N1092,N1093,N1088,N1089,N1081,N1130 g5
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N29">
+  <div class="branch-head">
+    <span class="branch-badge">43</span>
+    <div class="branch-head-text">
+      <h3>8世 時泰 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂 › 7世梁</p>
+    </div>
+    <span class="branch-count">13 人 · 13 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N29["8｜時泰（長子）"]
+  N56["9｜芝芳"]
+  N94["10｜調（五子）"]
+  N126["11｜啓辰（長子）"]
+  N147["12｜大偉（三子）"]
+  N146["12｜大倬（次子）"]
+  N145["12｜大伸（長子）"]
+  N93["10｜廷鑑（長子）"]
+  N97["11｜泉龍"]
+  N92["10｜九韶（三子）"]
+  N96["11｜文友"]
+  N91["10｜九奏（四子）"]
+  N90["10｜九夏（次子）"]
+  N29 --> N56
+  N56 --> N90
+  N56 --> N91
+  N56 --> N92
+  N56 --> N93
+  N56 --> N94
+  N94 --> N126
+  N126 --> N145
+  N126 --> N146
+  N126 --> N147
+  N93 --> N97
+  N92 --> N96
+  class N29 g1
+  class N56,N94,N126,N93,N97,N92,N96,N91,N90 g2
+  class N147,N146,N145 g3
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N12">
+  <div class="branch-head">
+    <span class="branch-badge">44</span>
+    <div class="branch-head-text">
+      <h3>7世 檟 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂</p>
+    </div>
+    <span class="branch-count">2 人 · 2 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N12["7｜檟（次子）"]
+  N34["8｜士尚"]
+  N12 --> N34
+  class N12,N34 g1
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+
+<section class="branch" id="branch-N13">
+  <div class="branch-head">
+    <span class="branch-badge">45</span>
+    <div class="branch-head-text">
+      <h3>7世 相 支</h3>
+      <p class="breadcrumb">5世鉉 › 6世沂</p>
+    </div>
+    <span class="branch-count">15 人 · 15 节点</span>
+  </div>
+  <div class="diagram-frame">
+    <pre class="mermaid">
+%%{init: {'themeVariables': {'fontFamily': 'Noto Sans TC, Noto Sans SC, sans-serif', 'lineColor': '#6b5c4d', 'edgeLabelBackground':'#f6f1e7'}}}%%
+flowchart TD
+  N13["7｜相（長子）"]
+  N35["8｜士元"]
+  N39["9｜希賢（長子）"]
+  N74["10｜良鼎"]
+  N73["10｜良弼"]
+  N124["11｜洪聲（長子）"]
+  N166["12｜國楨（長子）"]
+  N165["12｜國柱（次子）"]
+  N123["11｜和聲（長子）"]
+  N38["9｜希聖（次子）"]
+  N37["9｜希曾（三子）"]
+  N69["10｜良輔（長子）"]
+  N68["10｜良臣（次子）"]
+  N36["9｜希孟（四子）"]
+  N67["10｜良祖"]
+  N13 --> N35
+  N35 --> N36
+  N35 --> N37
+  N35 --> N38
+  N35 --> N39
+  N39 --> N73
+  N39 --> N74
+  N73 --> N123
+  N73 --> N124
+  N124 --> N165
+  N124 --> N166
+  N37 --> N68
+  N37 --> N69
+  N36 --> N67
+  class N13,N35 g1
+  class N39,N74,N73,N124,N123,N38,N37,N69,N68,N36,N67 g2
+  class N166,N165 g3
+classDef g1 fill:#eee3cd,stroke:#8a6f4e,color:#2b2018
+classDef g2 fill:#e3cd9e,stroke:#7c6339,color:#2b2018
+classDef g3 fill:#c9a86a,stroke:#6b5530,color:#2b2018
+classDef g4 fill:#a8763f,stroke:#5c4526,color:#fbf3e4
+classDef g5 fill:#8c2b26,stroke:#5c1c1a,color:#fbf3e4
+</pre>
+  </div>
+  <a class="back-top" href="#top">↑ 返回总览</a>
+</section>
+  </section>
+
+  <footer>
+    数据来源：c1f-1905.md（第5–14世取自1840年版 c1f.md，第15世起取自1905年版 c1fv5c.md 合并重建）。
+    因单一世系图节点/连线数量过大，本页按祖先分支拆分为 45 幅独立图表；各分支内部世系顺序、排行、小注均与原表一致，未作改动。
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+</script>
+</body>
+</html>
